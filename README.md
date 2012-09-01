@@ -7,7 +7,55 @@ This code journal will organize all of the topics/notes/questions into a linear 
 ## Current Questions
 _9/1_
 
-1. Why is my testing environment not loading for this dir? 
-Something with my rvmrc file configuration.
+1. Why is my testing environment not loading for code-journal Dir? 
+_I'm sure it's something with my RVM configuration._
 
 2. Why is my test on project euler ex passing?
+
+## Tasks
+_9/1_
+
+1. Update latest paper notes - including git whiteboard photo
+
+2. Figure out how to ignore '.' files in github (.DStore, .rvmrc)
+
+## Goals
+
+_September Goals_
+
+1. Get an internship at a software dev shop
+
+2. Build an unbeatable Tic Tac Toe game
+
+3. Intermediate grasp of unix, git, and github
+
+## Currently Reading
+
+Well Grounded Rubyist
+
+_Atlas Shrugged_
+
+_Bohoeffer_
+
+## To Read
+
+Software Craftsmanship - Pete McBreen
+
+Pragmatic Programmer - Hunt / Thomas
+
+Agile Software Development, Principles, Patterns, and Practices - Bob Martin
+
+Clean Code - Bob Martin et al.
+
+Refactoring - Martin Fowler
+
+eXtreme programming explained - Kent Beck
+
+Clean Coder - Bob Martin
+
+Eloquent Ruby
+
+
+
+
+
