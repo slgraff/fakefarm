@@ -1,8 +1,4 @@
-## Issue(Solved.): Git Branches
-Created a separate branch and named it the same as my directory. (codeJournalApp). 
-Gave me issues because my auto tab complete was going to my directory and not my branch. 
-
-## Issue: Can't seem to find rails on my system!
+## Issue(Solved): Can't seem to find rails on my system!
 Got this message when trying to run my server;
 
 _Rails is not currently installed on this system. To get the latest version, simply type:_
@@ -57,8 +53,12 @@ _Rails is not currently installed on this system. To get the latest version, sim
     Ok, so how does that help me? My .bash_profile looks like the following: 
     ``export PATH="/usr/local/bin:/usr/local/sbin:/usr/local/mysql/bin:$PATH"``
 
-## Quesitons
-- How do I get rails to work on my system?
+5. Gemsets
+ 
+Figured it was related to gemsets, so I went back to RVM. Read up on [Gemsets](https://rvm.io/gemsets/basics/) and this time, I did rails install without 'sudo'. 
+I did try to run server but it didn't work until I hit bundle one more time. (Some issue with coffee script, which was resolved with bundle.)
+
+## Questions
 - What directory paths should I be familiar with, and which should I be changing?
 - Anything in particular I should notice in my gem environment?
 - What should I do with `echo $PATH`? 
@@ -67,6 +67,11 @@ _Rails is not currently installed on this system. To get the latest version, sim
 **dmwoodall:NWNM dubipod$ echo $PATH**
 
     /Users/dubipod/.rvm/gems/ruby-1.9.3-p194@CodeJournal/bin:/Users/dubipod/.rvm/gems/ruby-1.9.3-p194@global/bin:/Users/dubipod/.rvm/rubies/ruby-1.9.3-p194/bin:/Users/dubipod/.rvm/bin:/usr/local/bin:/usr/local/sbin:/usr/local/mysql/bin:/usr/bin:/bin:/usr/sbin:/sbin:/opt/X11/bin
+
+## Issue (solved): Git Branches
+Created a separate branch and named it the same as my directory. (codeJournalApp). 
+Gave me issues because my auto tab complete was going to my directory and not my branch. 
+
 
 ## Summary
 - Starting to comprehend the need for bash scripting, changing directories, and having a better grasp on rvm & gem management
