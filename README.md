@@ -53,7 +53,7 @@ eXtreme programming explained - Kent Beck
 
 Clean Coder - Bob Martin
 
-Eloquent Ruby
+Eloquent Ruby-
 
 
 
