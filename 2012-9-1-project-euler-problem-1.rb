@@ -31,4 +31,5 @@ def sum_of_multiples(number)
   winners.inject(:+)
 end
 
-puts sum_of_multiples(10)
+puts sum_of_multiples(1000)
+# => 233168
