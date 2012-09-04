@@ -9,11 +9,15 @@
 # PROBLEM:
 # Find the sum of all the multiples of 3 or 5 below 1000.
 
-# TEST:
+# TESTS:
 =begin
 doctest: Show all numbers below 10 that are multiples of 3 or 5
 >> sum_of_multiples(10) 
 => "3, 5, 6, 9"
+
+doctest: Test the sum of the multiples
+>> sum_of_multiples(10)
+=> 23
 
 =end
 
@@ -24,7 +28,7 @@ def sum_of_multiples(number)
       winners << num
     end
   end
-  winners.join(", ")      
+  winners.inject(:+)
 end
 
-
+puts sum_of_multiples(10)
