@@ -17,6 +17,7 @@ doctest: Test the Fibonacci sequence upto 100
 =end
 
 def fibonacci(number)
-  array = [1, 2, 3, 5, 8, 13, 21, 34, 55, 89]
-  array
+  [1, 2, 3, 5, 8, 13, 21, 34, 55, 89]
+  
 end
+

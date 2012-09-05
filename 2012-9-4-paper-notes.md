@@ -2,6 +2,64 @@
 Raw notes taken during skype/ghangout/calls, etc. 
 I'm going to break these down and out as time goes on...
 
+# 9/5 Meeting with Michael Lacroix
+
+##HTML
+Haml
+
+##CSS
+SCSS
+Bourbon
+@mixins are like methods
+- makes the code cleaner
+
+bourbon is a bunch of pre-made mixins
+exmple: @include transition (all 0.3s);
+
+@mixin defines the mixin
+@includ calls the mixin
+@extend - brings in class into another attributes
+
+  @extend.clearfix (anything in the clearfix class - will clear out the content. '.clearfix' comes from bootstrap)
+
+.scss files - you can write normal sass but it's more compatable. has a more traditional look as css.
+
+.sass has it's own syntax which will look different 
+
+##JS
+Pjax
+JQ
+
+## Browser Testing
+Browser stack
+
+## Server
+Unicorn
+PG
+Thin
+
+
+
+look into iterm
+
+gem: friendly ID 
+
+
+
+bootstrap has a slideshow
+
+.row-fluid
+  .span6
+    =render 'shared/slideshow' (Renders partial from slideshow)
+    
+  .span6
+    %p
+      `Lorem...
+      
+
+
+
+
 ## Websites
 hojoki.com
 fortawesome.com
