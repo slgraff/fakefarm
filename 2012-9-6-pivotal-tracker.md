@@ -12,7 +12,7 @@ Developers then review the index cards and convert them into stories. Stories ar
 
 **An example**
 
-Index Card may say: "Shopping cart" (user, item, session and cart)
+Index Card: "Shopping cart (user, item, session and cart)"
 
 That index card will be converted into multiple stories including: 
 "As a user, I should be able to add an item to a cart"
