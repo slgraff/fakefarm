@@ -38,32 +38,30 @@ Once the stories have been written and estimated, the Product Owner will priorit
 Based on priority is what developers will set to work on.
 
 ### 5. Build Software
-Code will be in 3 environments, and four steps;
+Coding is organized into 3 environments, four panels, and four steps;
 
-**Environments**
+**Three Environments**
 
-Developer Environment - Code is written
+1. Developer Environment - Code is written
+2. Staging Environment - Code is tested
+3. Production Environment - Code pushed to client.
 
-Staging Environment - Code is tested
+**Four Panels**
 
-Production Environment - Code pushed to client.
+1. Icebox - Write & Estimate stories *(Developer Environment)*
+2. Backlog - Prioritize & Estimate stories *(Developer Environment)*
+3. Current - Build Software *(Developer Environment)*
+4. Done - Accepted Stories *(Staging & Production)*
 
-**Steps**
+**Four Steps**
 
-- Start - Get to work!
+1. Start - Get to work! *(Developer Environment & Current Panel)*
+2. Finished - Code ready for testing. *(Staging Environment & Current Panel)*
+3. Delivered - Upon passing tests, code is sent to client. *(Staging Environment & Current Panel)*
+4. Acceptance - Client approves code for production environment. *(Production Environment & Done Panel)*
 
-- Finished - Code ready for testing.
-
-- Delivered - Upon passing tests, code is sent to client.
-
-- Acceptance - Client approves code for production environment.
 
 ### 6. Acceptance
 The Product Owner will use the story and either accept, or reject it. If the story is accepted, then it's done. If not, it will restart based on PO's comments.
 
-### Stories will travel through 4 panels
-1. Icebox - Write & Estimate stories
-2. Backlog - Prioritize & Estimate stories
-3. Current - Build Software
-4. Done - Accepted Stories
 
