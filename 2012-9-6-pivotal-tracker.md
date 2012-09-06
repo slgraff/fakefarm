@@ -39,24 +39,24 @@ Once the stories have been written and estimated, the Product Owner will priorit
 Based on priority is what developers will set to work on.
 
 ### 5. Build Software
-Coding is organized into 3 environments, four panels, and four steps;
+Coding is organized into three environments, four panels, and four steps;
 
 **Three Environments**
 
-1. Developer Environment - Code is written
-2. Staging Environment - Code is tested
-3. Production Environment - Code pushed to client.
+1. Developer Environment - Write Code
+2. Staging Environment - Test Code
+3. Production Environment - Push Code 
 
 **Four Panels**
 
-1. Icebox - Write & Estimate stories *(Developer Environment)*
-2. Backlog - Prioritize & Estimate stories *(Developer Environment)*
-3. Current - Build Software *(Developer Environment)*
-4. Done - Accepted Stories *(Staging & Production)*
+1. Icebox - Pre-code stories *(Developer Environment)*
+2. Backlog - Upcoming code *(Developer Environment)*
+3. Current - Writing code *(Developer Environment)*
+4. Done - Post-code *(Staging & Production)*
 
 **Four Steps**
 
-1. Start - Get to work! *(Developer Environment & Current Panel)*
+1. Start - Actively coding *(Developer Environment & Current Panel)*
 2. Finished - Code ready for testing. *(Staging Environment & Current Panel)*
 3. Delivered - Upon passing tests, code is sent to client. *(Staging Environment & Current Panel)*
 4. Acceptance - Client approves code for production environment. *(Production Environment & Done Panel)*
