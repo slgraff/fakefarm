@@ -1,4 +1,5 @@
-#Pivotal Tracker
+# Pivotal Tracker
+
 [Pivotal Tracker](https://www.pivotaltracker.com) is a project management tool that focuses on tasks more than goals and milestones.
 
 ## Six Step Process
