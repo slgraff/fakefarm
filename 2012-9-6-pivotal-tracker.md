@@ -1,5 +1,5 @@
 #Pivotal Tracker
-[Pivotal Tracker](https://www.pivotaltracker.com) is less about creating goals and more about tracking what you're actual doing, how far along, and what's left to do.
+[Pivotal Tracker](https://www.pivotaltracker.com) is a project management tool that focuses on tasks more than goals and milestones.
 
 ## Six Step Process
 
