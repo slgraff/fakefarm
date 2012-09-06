@@ -1,5 +1,5 @@
 #Pivotal Tracker
-[Tracker](https://www.pivotaltracker.com) is less about creating goals and more about tracking what you're actual doing, how far along, and what's left to do.
+[Pivotal Tracker](https://www.pivotaltracker.com) is less about creating goals and more about tracking what you're actual doing, how far along, and what's left to do.
 
 ## Six Step Process
 
