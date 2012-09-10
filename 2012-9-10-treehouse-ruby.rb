@@ -447,26 +447,178 @@
 # end
 
 
-# yield example with numbers
-def show_numbers(numbers= 10)
-  i = 0
-  while i < 10
-    yield i
-    i += 1
+# # yield example with numbers
+# def show_numbers
+#   i = 0
+#   while i < 10
+#     yield i
+#     i += 1
+#   end
+# end
+
+# show_numbers do |number|
+#   puts "The current number is #{number}"
+#   number = number * 2
+#   puts "The current number multiplied by 2 #{number}."
+# end
+
+# # Example 2
+# def get_name(&block)
+#   print "Enter your name: "
+#   name = gets.chomp
+#   yield name
+#   puts "It was nice to meet you, #{name}"
+# end
+
+# get_name do |name|
+#   puts "Hi, #{name}"
+#   name = name.upcase
+#   puts "Uppercased, you name is #{name}"
+# end
+
+# # Creating Procs & Lambdas
+# # http://teamtreehouse.com/library/programming-2/ruby-foundations/procs-lambdas/creating-procs-lambdas
+
+# my_proc = proc {}
+# my_proc = Proc.new {}
+
+# my_lambda = lambda {}
+# my_lambda = -> {}
+
+# # Working with Procs & Lambdas
+# # http://teamtreehouse.com/library/programming-2/ruby-foundations/procs-lambdas/working-with-procs-lambdas
+
+# my_proc = proc { |name| puts "Hello, #{name}" }
+# my_proc.call # without an argument, prints out nil.
+# my_proc.call "Dave"
+# my_proc.call ("Dave") # optional
+
+# # Lambda requies arguments, whereas procs do not.
+# my_lambda = lambda { |name| puts "Helo, #{name}"}
+# my_lambda.call "Jason"
+
+# # Procs let you write a method once and call it multiple times.
+
+# class Paper
+#   def initialize(&block)
+#     yield self if block_given?
+#   end
+
+#   def set_variable
+#     return Proc.new do |kind, val|
+#       [kind, val].join(": ")
+#     end
+#   end
+
+#   def title(value)
+#     @title = set_variable.call "TITLE", value
+#   end
+
+#   def heading(value)
+#     @heading = set_variable.call "HEADING", value
+#   end
+
+#   def body(value)
+#     @body = set_variable.call "BODY", value
+#   end
+
+#   def display
+#     puts @title
+#     puts "-----------------"
+#     puts @heading
+#     puts "-----------------"
+#     puts @body
+#     puts "-----------------"
+#   end
+# end
+
+
+# paper = Paper.new do |p|
+#   p.title     "My paper"
+#   p.heading   "my heading"
+#   p.body      "This is where all the text goes for my project"
+# end
+
+
+# paper.display
+
+
+# # Creating Modules
+# # http://teamtreehouse.com/library/programming-2/ruby-foundations/modules/creating-modules
+
+# module Treehouse
+#   MASCOT = "Mike the frog" #constants are all uppercase
+#   class Frog
+#     attr_accessor :name
+#   end
+# end
+
+# >> Treehouse::MASCOT # the two colons tell ruby that you want to go inside the module for something.
+# >> mike = Treehouse::Frog.new
+# => mike.name = "Mike The Frog"
+
+# Extend & Include part 1
+# http://teamtreehouse.com/library/programming-2/ruby-foundations/modules/extend-and-include-part-1
+
+class Hello
+  def initialize(name)
+    @name = name
   end
 end
 
-show_numbers do |number|
-  puts "The current number is #{number}"
-  number = number * 2
-  puts "The current number multiplied by 2 #{number}."
+module SayHello
+  def say_hello
+    puts "Hello #{@name}"
+  end
 end
 
+hello = Hello.new("Dave")
+hello.extend SayHello # Extend calls before?
+
+hello.say_hello
+
+
+class GoodBye
+  include SayHello # include calls inside the class.
+  attr_accessor :name
+end
+
+g = GoodBye.new
+g.say_hello
+
+# Modules: Extend & Include Part 2
+# http://teamtreehouse.com/library/programming-2/ruby-foundations/modules/extend-and-include-part-2
 
 
 
+# Extend adds the instance methods to the object - methods are added to the class
+# Include makes methods available to the instance of the class
+
+# modules provide a great way to reuse your code across classes.
 
 
+# Structs
+# http://teamtreehouse.com/library/programming-2/ruby-foundations/ruby-core/struct
+
+#it's like a hash - setting multiple attributes at once.
+
+# creates a new class but puts our class into a struct
+Struct.new ("Treehouse", :name, :locaiton)
+
+treehouse = Struct::Treehouse.new
+treehouse.name = "Treehouse"
+treehouse.locaiton = "Top"
+
+Island = Struct.new(:name, :locaiton)
+treehouse = Island.new("Treehouse", "N/A")
+puts treehouse
+
+# Adding methods
+
+Island = Struct.new(:name, :locaiton) do
+  def to_s
+    "<#{name}, #{location}>"
+end
 
 
 
