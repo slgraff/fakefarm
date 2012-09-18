@@ -61,3 +61,32 @@ o2js Getting Started
 More on Package Control
 Some Extra Syntax Highlighting
 
+**Okay back to Bootstrap!**
+
+1. [Install bootstrap-sass](https://github.com/thomas-mcdonald/bootstrap-sass)
+
+2.
+
+## Questions
+1. setting up has_many / belongs_to
+Reviewed the TTH-ShopApp to find the answer.
+
+2. Adding a field to a model and being able to use it on a form
+3.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
