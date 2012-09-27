@@ -1,0 +1,31 @@
+# Unix Basics - Part 1
+
+## Files
+### Creating Files
+cp - copy files
+cp file(to copy) file(name of new file)
+
+### Listing Files
+ls - list files
+
+### Altering Files
+mv - changes the name of a file.
+rm - removes files
+
+to make and add content to a file use the '>' symbol.
+
+    echo 'star' > repo.txt
+
+to see the contents use 'cat'
+
+    cat repo.txt
+
+### Links
+
+ln wormhole.txt gama.txt
+
+## Directories
+
+## Paths
+
+## Permissions
