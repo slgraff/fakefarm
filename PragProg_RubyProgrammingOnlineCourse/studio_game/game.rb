@@ -1,4 +1,6 @@
 require './player'
+require './die'
+require './game_turn'
 
 class Game
 
@@ -13,11 +15,24 @@ class Game
     @players << name
   end
 
-  def play
-    puts "There are #{@players.size} in our game #{@title}."
+  def heading
+    puts "".center(50,"-")
+    puts "There are #{@players.size} in #{@title}."
+    puts "".center(50,"-")
+  end
+
+  def intro
     @players.each do |player|
-       puts player.blam
-       puts player.w00t
+       puts player
+    end
+  end
+
+  def play
+    heading
+    intro
+    @players.each do |player|
+      GameTurn.take_turn(player)
+      puts player
     end
   end
 end

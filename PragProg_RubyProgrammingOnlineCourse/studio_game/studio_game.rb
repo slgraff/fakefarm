@@ -2,8 +2,6 @@
 require './player'
 require './game'
 
-
-
 player1 = Player.new("moe")
 player2 = Player.new("larry", 60)
 player3 = Player.new("curly", 125)
