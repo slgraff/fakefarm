@@ -2,30 +2,19 @@
 
 The knowledge I have is limited and cluttered with a lot of garbage, confusion, and bad ideas.I tried to blog and evernote everything I thought relevant. But the stage that I'm at is more of an on the fly learning. I don't have time (or insight) yet to slow down and compose a helpful blog post yet.
 
-This code journal will organize all of the topics/notes/questions into a linear process to see what I am learning. It's not necessarily for technical reasons but more to create a paper trail to confirm that progress is happening :-) 
+This code journal will organize all of the topics/notes/questions into a linear process to see what I am learning. It's not necessarily for technical reasons but more to create a paper trail to confirm that progress is happening :-)
 
 ## Current Questions & Tasks
 
 managed in [Issues](https://github.com/DMWoodall/code-journal/issues?sort=created&state=open)
 
-## Tasks
-_9/1_
-
-
-
-2. Figure out how to ignore '.' files in github (.DStore, .rvmrc)
 
 ## Goals
 
-_September Goals_
-
-1. Get an internship at a software dev shop
-
-2. Build an unbeatable Tic Tac Toe game
-
-3. Intermediate grasp of unix, git, and github
 
 ## Currently Reading
+
+RSpec Book
 
 Well Grounded Rubyist
 
@@ -50,7 +39,6 @@ eXtreme programming explained - Kent Beck
 Clean Coder - Bob Martin
 
 Eloquent Ruby-
-
 
 
 
