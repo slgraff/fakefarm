@@ -1,6 +1,8 @@
 require './player'
 require './die'
 require './game_turn'
+require './treasure_trove'
+
 
 class Game
 
@@ -58,9 +60,18 @@ class Game
     end
   end
 
+
+
   def play(rounds)
     heading
     intro
+    treasures = TreasureTrove::TREASURES
+
+    puts "\nThere are #{treasures.size} treasures to be found!"
+    treasures.each do |t|
+      puts "The #{t.name} is worth #{t.points} points."
+    end
+
     1.upto(rounds) do |round|
       puts "\nRound #{round}"
       @players.each do |player|
@@ -68,5 +79,57 @@ class Game
         puts player
       end
     end
+
   end
 end
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
