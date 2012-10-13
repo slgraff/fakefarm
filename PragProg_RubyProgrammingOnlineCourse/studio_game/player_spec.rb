@@ -75,7 +75,7 @@ describe Player do
   it 'computes points as the sum of all treasure points' do
     @player.points.should == 0
 
-    @player.round_treasure(Treasure.new(:hammer, 50))
+    @player.found_treasure(Treasure.new(:hammer, 50))
 
     @player.points.should == 50
 
