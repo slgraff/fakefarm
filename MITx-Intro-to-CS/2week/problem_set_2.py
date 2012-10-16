@@ -1,6 +1,6 @@
 # PROBLEM 3
 
-balance = 0
+balance = 4773
 annualInterestRate = 0.2
 
 new_balance = balance
@@ -10,7 +10,7 @@ step = 0.01
 epsilon = 0.01
 
 lower_bound = balance / 12
-upper_bound = ( balance * ( 1 + monthly_interest ) ** 12 ) / 12 )
+upper_bound = ( balance * ( 1 + monthly_interest) ** 12 / 12 )
 
 while new_balance > 0:
   for month in range(0,12):
