@@ -7,10 +7,20 @@ new_balance = balance
 monthly_interest = ( annualInterestRate / 12 )
 payment = 10
 step = 0.01
+epsilon = 0.01
 
 lower_bound = balance / 12
 upper_bound = ( balance * ( 1 + monthly_interest ) ** 12 ) / 12 )
 
+while new_balance > 0:
+  for month in range(0,12):
+    new_balance = (new_balance - payment) * (1 + annualInterestRate / 12)
+  if new_balance <= epsilon:
+    break
+  else:
+    new_balance = balance
+    # assign payment be at low or high end of the split
+    # I think...
 
 # FORMULAS
 
