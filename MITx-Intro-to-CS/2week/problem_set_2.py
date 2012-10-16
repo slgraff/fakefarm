@@ -7,20 +7,20 @@ new_balance = balance
 monthly_interest = ( annualInterestRate / 12 )
 payment = 10
 step = 0.01
-epsilon = 0.10
+epsilon = 10
 
 lower_bound = balance / 12
-upper_bound = ( balance * ( 1 + monthly_interest) ** 12 / 12 )
+upper_bound = ( balance * (( 1 + monthly_interest) ** 12) / 12 )
 
-while new_balance > 0:
-  for month in range(0,12):
+while new_balance > epsilon:
+  for month in range(1,13):
     new_balance = (new_balance - payment) * (1 + annualInterestRate / 12)
     print "-----------"
     print "Month: " + str(month)
     print "Payment: " + str(payment)
     print "Balance: " + str(new_balance)
 
-  if abs(new_balance) <= epsilon:
+  if epsilon >= abs(new_balance):
     break
 
   elif new_balance > 0:
@@ -28,7 +28,7 @@ while new_balance > 0:
     payment += (upper_bound + payment) / 2
 
   else:
-    new_balance = balance
+    new_balance < 0
     payment += (lower_bound + payment) / 2
 
 
