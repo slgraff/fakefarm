@@ -183,7 +183,17 @@
 #     print "Amount paid: " + str(my_payment)
 #     print "Balance: " + str(new_balance)
 
+# PROBLEM 3
 
+balance = 0
+new_balance = balance
+annualInterestRate = 0.2
+monthly_interest = ( annualInterestRate / 12 )
+payment = 10
+step = 0.01
+
+lower_bound = balance / 12
+upper_bound = ( balance * ( 1 + monthly_interest ) ** 12 ) / 12 )
 
 
 
