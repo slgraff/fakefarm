@@ -21,9 +21,14 @@ while new_balance > 0:
 
   if new_balance <= epsilon:
     break
+
+  elif new_balance < 0:
+    new_balance = balance
+    payment += (upper_bound + payment) / 2
+
   else:
     new_balance = balance
-    payment += (lower_bound + upper_bound) / 2
+    payment += (lower_bound + payment) / 2
 
 
 print "Lowest Payment: " + str(round(payment,2))
