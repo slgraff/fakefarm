@@ -19,8 +19,9 @@ while new_balance > 0:
     break
   else:
     new_balance = balance
-    # assign payment be at low or high end of the split
-    # I think...
+    payment += (lower_bound + upper_bound) / 2
+
+print "Lowest Payment: " + str(payment)
 
 # FORMULAS
 
