@@ -15,13 +15,18 @@ upper_bound = ( balance * ( 1 + monthly_interest) ** 12 / 12 )
 while new_balance > 0:
   for month in range(0,12):
     new_balance = (new_balance - payment) * (1 + annualInterestRate / 12)
+    print "Month: " + str(month)
+    print "Payment: " + str(payment)
+    print "Balance: " + str(new_balance)
+
   if new_balance <= epsilon:
     break
   else:
     new_balance = balance
     payment += (lower_bound + upper_bound) / 2
 
-print "Lowest Payment: " + str(payment)
+
+print "Lowest Payment: " + str(round(payment,2))
 
 # FORMULAS
 
