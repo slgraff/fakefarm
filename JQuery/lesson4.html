@@ -7,16 +7,52 @@
 <body>
   <h1>My Website</h1>
 
-<button>Day</button>
-<button>Night</button>
+<button data-file='day'>Day</button>
+<button data-file='night'>Night</button>
 
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js"></script>
 
   <script>
 
-(function()){
+$(function(){
+  var link = $('link');
+  $('button').click(function() {
 
+    var $this = $(this),
+        stylesheet = $this.data('file');
+
+    link.attr('href', stylesheet + '.css');
+
+    $this
+      .siblings('button')
+          .removeAttr('disabled')
+          .end()
+          .attr('disabled', 'disabled')
+
+
+
+    // var $this = $(this),
+    //     stylesheet = $this.data('file');
+
+    // $this.siblings('button').removeAttr('disabled')
+
+    // link.attr('href', stylesheet + '.css');
+    // $this.attr('disabled', 'disabled')
+  });
 })();
+
+    // Version 2 - Reference syletheet by HTML5 element data-file
+    // var stylesheet = $(this).data('file');
+    // console.log(stylesheet);
+    // $('link').attr('href', stylesheet + '.css');
+
+
+    // Version 1 - Reference stylesheet by name associated to button.
+    // var stylesheet = $(this).text().toLowerCase();
+    // console.log(stylesheet);
+    // $('link').attr('href', stylesheet + '.css');
+    //   });
+    // })();
 
   </script>
 
@@ -24,5 +60,16 @@
 
 </body>
 </html>
+
+
+
+
+
+
+
+
+
+
+
 
 
