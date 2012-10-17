@@ -1,3 +1,4 @@
+
 class Player
 
   attr_accessor :name, :health
@@ -21,7 +22,7 @@ class Player
 
 
   def to_s
-    "I'm #{@name} with a health of #{@health} & a score of #{score}"
+    "I'm #{@name} with a health = #{@health}, points = #{points}, and score = #{score}."
   end
 
   def <=>(other)
@@ -40,7 +41,7 @@ class Player
   end
 
   def score
-    @health + @name.length
+    @health + points
   end
 
   def strong?

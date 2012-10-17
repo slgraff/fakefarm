@@ -19,11 +19,17 @@ describe Player do
   end
 
   it 'has a string representation' do
-    @player.to_s.should == "I'm Larry with a health of 150 & a score of 155"
+
+    @player.found_treasure(Treasure.new(:hammer,50))
+    @player.found_treasure(Treasure.new(:hammer,50))
+
+    @player.to_s.should == "I'm Larry with a health = 150, points = 100, and score = 250."
   end
 
   it 'computes a score as a the sum of its health and length of name' do
-    @player.score.should == @initial_health + 5
+    @player.found_treasure(Treasure.new(:hammer, 50))
+    @player.found_treasure(Treasure.new(:hammer, 50))
+    @player.score.should == 250
   end
 
   it 'increases health by 15 when w00ted' do

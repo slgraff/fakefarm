@@ -40,8 +40,25 @@ class Game
     weak_players.each do |player|
       puts "#{player.name} with a score of #{player.health}"
     end
+
+    @players.each do |player|
+      puts "#{player.name}'s point totals:"
+      puts "#{player.points} grand total points"
+      puts ""
+    end
+
+      puts "Total points for the game was #{total_points}"
   end
 
+  def total_points
+    # total = []
+    # @players.each do |player|
+    #   total << player.points
+    # end
+    # total.reduce(:+)
+
+    @players.reduce(0) { |sum, player| sum + player.points }
+  end
 
 
   def add_player(name)
