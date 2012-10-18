@@ -41,11 +41,17 @@ class Game
       puts "#{player.name} with a score of #{player.health}"
     end
 
-    @players.each do |player|
-      puts "#{player.name}'s point totals:"
-      puts "#{player.points} grand total points"
-      puts ""
-    end
+    @players.sort.each do |player|
+      puts "\n#{player.name}'s point totals:"
+
+      player.each_found_treasure do |treasure|
+      puts "#{treasure.points} total #{treasure.name} points"
+     end
+
+     puts "#{player.points} grand total points"
+
+  end
+
 
       puts "Total points for the game was #{total_points}"
   end
