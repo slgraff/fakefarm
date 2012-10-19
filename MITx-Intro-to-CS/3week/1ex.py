@@ -1,3 +1,28 @@
+# Problem 7
+print "-- Ex 7 ---------------------"
+
+def lenRecur(string):
+  if string == '':
+    return 0
+  print string
+  return 1 + lenRecur(string[1:])
+
+print lenRecur('hello')
+
+
+
+
+# Problem 6
+print "-- Ex 6 ---------------------"
+
+def lenIter(string):
+  count = 0
+  for number in string:
+      count += 1
+  return count
+
+print lenIter('hello')
+
 
 # Problem 5
 print "-- Ex 5 ---------------------"
@@ -17,23 +42,6 @@ print gcdIter(6,12)
 print gcdIter(9,12)
 print gcdIter(17,12)
 print gcdIter(867,1989)
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 # Problem 4
 print "-- Ex 4 ---------------------"
