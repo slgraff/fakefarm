@@ -1,4 +1,95 @@
-# Class notes
+
+# Problem 5
+print "-- Ex 5 ---------------------"
+
+def gcdIter(a,b):
+
+  if b == 0:
+    return a
+  elif a == b:
+    return a
+  else:
+    return gcdIter(b, a % b)
+
+
+print gcdIter(2,12)
+print gcdIter(6,12)
+print gcdIter(9,12)
+print gcdIter(17,12)
+print gcdIter(867,1989)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+# Problem 4
+print "-- Ex 4 ---------------------"
+
+def gcdIter(a,b):
+  x = a
+  while x > 0:
+    if a % x == 0 and b % x == 0:
+      return x
+    else:
+      x -= 1
+
+print gcdIter(2,12)
+print gcdIter(6,12)
+print gcdIter(9,12)
+print gcdIter(17,12)
+
+# Problem 3
+
+print "-- Ex 3 ---------------------"
+
+
+def recurPowerNew(base, exp):
+
+    # Base case is when exp = 0
+    if exp <= 0:
+        return 1
+
+    # Recursive case 1: exp > 0 and even
+    elif exp % 2 == 0:
+        return recurPowerNew(base*base, exp/2)
+
+    # Otherwise, exp must be > 0 and odd, so use the second
+    #  recursive case.
+    return base * recurPowerNew(base, exp - 1)
+
+print recurPowerNew(2,2)
+print recurPowerNew(2,3)
+print recurPowerNew(2,0)
+
+
+print "--------------------"
+# Problem 2
+
+def recurPower(base,exp):
+  if exp <= 0:
+    return 1
+  else:
+    return base * recurPower(base, exp-1)
+
+print recurPower(1,2)
+print recurPower(2,2)
+print recurPower(3,2)
+print recurPower(4,2)
+
+
 
 # Recursion ----------------
 # Example
