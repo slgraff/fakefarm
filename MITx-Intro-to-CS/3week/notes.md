@@ -32,3 +32,24 @@ Programs need
 - Base
 - State
 - Behavior
+
+## Different classes of algorithms
+
+### Exhaustive enumeration
+
+### Guess and Check
+
+### Bisection
+
+### Divide & Conquer
+
+## Compound data structures
+
+### Tuples
+Concatenate
+Index
+Slice
+Singleton
+If you add only one
+### Lists
+### Dictionaries
