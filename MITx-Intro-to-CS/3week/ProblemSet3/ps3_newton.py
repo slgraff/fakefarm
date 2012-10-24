@@ -1,58 +1,81 @@
-# Problem 1: Polynomials
-def evaluatePoly(poly, x):
-    '''
-    Computes the value of a polynomial function at given value x. Returns that
-    value as a float.
+# # Problem 1: Polynomials
+# def evaluatePoly(poly, x):
+#     '''
+#     Computes the value of a polynomial function at given value x. Returns that
+#     value as a float.
 
-    poly: list of numbers, length > 0
-    x: number
-    returns: float
-    '''
-    place = 0
-    value = 0.0
-    coef  = 0
-    power = 0
+#     poly: list of numbers, length > 0
+#     x: number
+#     returns: float
+#     '''
+#     place = 0
+#     value = 0.0
+#     coef  = 0
+#     power = 0
 
-    while place <= len(poly):
-        if poly[place] < 0:
-            place += 1
-        else:
-            coef = poly[place]
-            power = x ** place
-            value += power * coef
-            place += 1
-    return value
+#     while place <= len(poly):
+#         if poly[place] < 0:
+#             place += 1
+#         else:
+#             coef = poly[place]
+#             power = x ** place
+#             value += power * coef
+#             place += 1
+#     return value
 
 
-poly = [0.0, 0.0, 5.0, 9.3, 7.0]
-x = -13
-print evaluatePoly(poly, x)
+# poly = [0.0, 0.0, 5.0, 9.3, 7.0]
+# x = -13
+# print evaluatePoly(poly, x)
 
-## Here's what I get when I call it...
+# ## Here's what I get when I call it...
 
-# Traceback (most recent call last):
-#   File "ps3_newton.py", line 35, in <module>
-#     print evaluatePoly(poly, x)
-#   File "ps3_newton.py", line 23, in evaluatePoly
-#     if poly[place] < 0:
-# IndexError: list index out of range
+# # Traceback (most recent call last):
+# #   File "ps3_newton.py", line 35, in <module>
+# #     print evaluatePoly(poly, x)
+# #   File "ps3_newton.py", line 23, in evaluatePoly
+# #     if poly[place] < 0:
+# # IndexError: list index out of range
 
 
 
 
 # Problem 2: Derivatives
+
+# - 13.39 + 17.5x^2 + 3x^3 + x^4
+# >>> poly = [-13.39, 0.0, 17.5, 3.0, 1.0]
+# >>> print computeDeriv(poly)
+# [0.0, 35.0, 9.0, 4.0] # 35x + 9x^2 + 4x^3
+
+
 def computeDeriv(poly):
-    '''
-    Computes and returns the derivative of a polynomial function as a list of
-    floats. If the derivative is 0, returns [0.0].
+  place = 0
+  coef  = 0.0
+  power = 1
+  my_poly = []
 
-    poly: list of numbers, length &gt; 0
-    returns: list of numbers (floats)
-    '''
-    # FILL IN YOUR CODE HERE...
+  if len(poly) == 1:
+    my_poly.append(0.0)
+
+  else:
+    while place < len(poly):
+
+      if place > 0:
+        coef = poly[place] * power
+        my_poly.append(coef)
+        place += 1
+        power += 1
+      else:
+        place += 1
+
+  return my_poly
 
 
+poly = [-13.39, 0.0, 17.5, 3.0, 1.0]
+print computeDeriv(poly)
 
+
+print computeDeriv([17])
 
 
 # Problem 3: Newton's Method
@@ -70,3 +93,47 @@ def computeRoot(poly, x_0, epsilon):
     returns: list [float, int]
     '''
     # FILL IN YOUR CODE HERE...
+
+
+# poly will be a list
+# x_0 is the root
+# epsilon is the state
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
