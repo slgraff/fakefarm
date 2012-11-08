@@ -1,9 +1,8 @@
 
 # Print out the pairs of items in an array that equal 8
 
-# numbers = [1,2,5,7,4,3,12,6]
-
 def combinations_of_eight(list_of_numbers)
+
   matches = []
 
   list_of_numbers.each do |first_number|
@@ -21,5 +20,5 @@ def combinations_of_eight(list_of_numbers)
   matches = matches.uniq
 end
 
-# print combinations_of_eight(numbers)
+
 
