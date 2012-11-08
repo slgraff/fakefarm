@@ -16,4 +16,9 @@ describe "The combinations_of_eight method" do
     numbers = [4]
     combinations_of_eight(numbers).should_not == [4,4]
   end
+
+  it "will count double numbers as unqiue" do
+    numbers = [4,4]
+    combinations_of_eight(numbers).should == [4,4]
+  end
 end

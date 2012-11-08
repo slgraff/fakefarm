@@ -21,4 +21,5 @@ def combinations_of_eight(list_of_numbers)
 end
 
 
-
+list_of_numbers = [4,4]
+print combinations_of_eight(list_of_numbers)
