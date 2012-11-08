@@ -17,9 +17,9 @@ def combinations_of_eight(list_of_numbers)
     end
   end
 
+  if list_of_numbers.count(4) == 2
+    matches << [4,4]
+  end
+
   matches = matches.uniq
 end
-
-
-list_of_numbers = [4,4]
-print combinations_of_eight(list_of_numbers)
