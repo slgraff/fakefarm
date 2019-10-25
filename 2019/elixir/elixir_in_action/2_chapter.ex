@@ -9,8 +9,11 @@ defmodule Geometry do
   end
 end
 
-# single line
-
-defmodule Geometry2 do
-  def rectangle_area(a,b), do: a*b
+# single line and function arity
+defmodule Rectangle do
+  def area(a), do: area(a,a)
+  def area(a,b), do: a*b
 end
+
+
+
