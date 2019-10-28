@@ -78,3 +78,25 @@ The kernal module is imported into every module.
 `require`
 
 ![](./images/diretives.png)
+
+## Pattern Matching
+
+Elixir Supports, even encourages, naming functions the same name. THe difference is the number of arguments passed.
+
+## Guard Clauses
+
+## Anonymous Functions
+there are two types:
+- lambda style
+- capture style
+
+Capture style is a new concept which looks like this:
+
+```
+  list = [1,2,3,4]
+  Enum.map(list, fn(x) -> x*x end)
+  Enum.reduce(list, 0, fn(x, acc) -> acc + x end)
+
+  Enum.map(list, &(&1 * &1))
+  Enum.reduce(list, 0, &(&1 + &2))
+```
