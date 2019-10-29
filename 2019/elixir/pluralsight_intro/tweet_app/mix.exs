@@ -14,7 +14,7 @@ defmodule TweetApp.MixProject do
   # Run "mix help compile.app" to learn about applications.
   def application do
     [
-      extra_applications: [:logger],
+      extra_applications: [:logger, :quantum],
       mod: {TweetApp.Application, []}
     ]
   end
@@ -22,7 +22,8 @@ defmodule TweetApp.MixProject do
   # Run "mix help deps" to learn about dependencies.
   defp deps do
     [
-      {:credo, "~> 1.1"}
+      {:credo, "~> 1.1"},
+      {:quantum, "~> 2.3"}
     ]
   end
 end
