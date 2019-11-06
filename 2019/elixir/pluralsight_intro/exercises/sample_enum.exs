@@ -38,3 +38,9 @@ def other_map([head | tail], f, result),
   do: other_map(tail, f, [f.(head) | result])
 
 end
+
+defmodule Bar do
+  def first([head | tail]) do
+    head
+  end
+end

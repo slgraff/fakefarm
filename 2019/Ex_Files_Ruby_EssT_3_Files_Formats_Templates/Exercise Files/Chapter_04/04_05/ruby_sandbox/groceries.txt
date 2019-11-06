@@ -1,4 +1,0 @@
-Grocery List
-+ butter
-+ milk (lowfat)
-+ sugar
