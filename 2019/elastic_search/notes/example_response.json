@@ -1,0 +1,179 @@
+{
+  "took" : 68,
+  "timed_out" : false,
+  "_shards" : {
+    "total" : 1,
+    "successful" : 1,
+    "skipped" : 0,
+    "failed" : 0
+  },
+  "hits" : {
+    "total" : {
+      "value" : 19,
+      "relation" : "eq"
+    },
+    "max_score" : 6.505949,
+    "hits" : [
+      {
+        "_index" : "customers",
+        "_type" : "personal",
+        "_id" : "di2vQW4B8-2GlOupLZWK",
+        "_score" : 6.505949,
+        "_source" : {
+          "name" : "Rosanne Mosley",
+          "age" : 72,
+          "gender" : "female",
+          "email" : "rosannemosley@talkalot.com",
+          "phone" : "+1 (875) 585-2859",
+          "street" : "360 Brooklyn Avenue",
+          "city" : "Wyoming",
+          "state" : "North Carolina, 8725"
+        }
+      },
+      {
+        "_index" : "customers",
+        "_type" : "personal",
+        "_id" : "Hy2vQW4B8-2GlOupLZSI",
+        "_score" : 4.257279,
+        "_source" : {
+          "name" : "Kidd Russell",
+          "age" : 75,
+          "gender" : "male",
+          "email" : "kiddrussell@talkalot.com",
+          "phone" : "+1 (859) 500-2229",
+          "street" : "500 Powell Street",
+          "city" : "Grapeview",
+          "state" : "Wyoming, 8657"
+        }
+      },
+      {
+        "_index" : "customers",
+        "_type" : "personal",
+        "_id" : "WS2vQW4B8-2GlOupLZSI",
+        "_score" : 4.257279,
+        "_source" : {
+          "name" : "Petra Flores",
+          "age" : 59,
+          "gender" : "female",
+          "email" : "petraflores@talkalot.com",
+          "phone" : "+1 (859) 591-2178",
+          "street" : "742 Bay Avenue",
+          "city" : "Succasunna",
+          "state" : "Wyoming, 4447"
+        }
+      },
+      {
+        "_index" : "customers",
+        "_type" : "personal",
+        "_id" : "ky2vQW4B8-2GlOupLZSJ",
+        "_score" : 4.257279,
+        "_source" : {
+          "name" : "Cline Macias",
+          "age" : 26,
+          "gender" : "male",
+          "email" : "clinemacias@talkalot.com",
+          "phone" : "+1 (855) 587-2639",
+          "street" : "136 Summit Street",
+          "city" : "Herbster",
+          "state" : "Wyoming, 509"
+        }
+      },
+      {
+        "_index" : "customers",
+        "_type" : "personal",
+        "_id" : "zS2vQW4B8-2GlOupLZSJ",
+        "_score" : 4.257279,
+        "_source" : {
+          "name" : "Todd Garza",
+          "age" : 74,
+          "gender" : "male",
+          "email" : "toddgarza@talkalot.com",
+          "phone" : "+1 (806) 496-2343",
+          "street" : "720 Halleck Street",
+          "city" : "Kohatk",
+          "state" : "Wyoming, 779"
+        }
+      },
+      {
+        "_index" : "customers",
+        "_type" : "personal",
+        "_id" : "By2vQW4B8-2GlOupLZWJ",
+        "_score" : 4.257279,
+        "_source" : {
+          "name" : "Green Fields",
+          "age" : 74,
+          "gender" : "male",
+          "email" : "greenfields@talkalot.com",
+          "phone" : "+1 (860) 593-3981",
+          "street" : "917 Croton Loop",
+          "city" : "Mansfield",
+          "state" : "Wyoming, 4025"
+        }
+      },
+      {
+        "_index" : "customers",
+        "_type" : "personal",
+        "_id" : "QS2vQW4B8-2GlOupLZWJ",
+        "_score" : 4.257279,
+        "_source" : {
+          "name" : "Wall Vazquez",
+          "age" : 73,
+          "gender" : "male",
+          "email" : "wallvazquez@talkalot.com",
+          "phone" : "+1 (995) 544-3349",
+          "street" : "505 Bryant Street",
+          "city" : "Frystown",
+          "state" : "Wyoming, 2506"
+        }
+      },
+      {
+        "_index" : "customers",
+        "_type" : "personal",
+        "_id" : "ey2vQW4B8-2GlOupLZWK",
+        "_score" : 4.257279,
+        "_source" : {
+          "name" : "Newton Reid",
+          "age" : 59,
+          "gender" : "male",
+          "email" : "newtonreid@talkalot.com",
+          "phone" : "+1 (815) 457-2792",
+          "street" : "167 Overbaugh Place",
+          "city" : "Tibbie",
+          "state" : "Wyoming, 5758"
+        }
+      },
+      {
+        "_index" : "customers",
+        "_type" : "personal",
+        "_id" : "tS2vQW4B8-2GlOupLZWK",
+        "_score" : 4.257279,
+        "_source" : {
+          "name" : "Dixie Watkins",
+          "age" : 35,
+          "gender" : "female",
+          "email" : "dixiewatkins@talkalot.com",
+          "phone" : "+1 (928) 402-3592",
+          "street" : "524 Sutter Avenue",
+          "city" : "Dodge",
+          "state" : "Wyoming, 9559"
+        }
+      },
+      {
+        "_index" : "customers",
+        "_type" : "personal",
+        "_id" : "7y2vQW4B8-2GlOupLZWK",
+        "_score" : 4.257279,
+        "_source" : {
+          "name" : "Shannon Griffith",
+          "age" : 32,
+          "gender" : "male",
+          "email" : "shannongriffith@talkalot.com",
+          "phone" : "+1 (839) 402-2971",
+          "street" : "557 Harwood Place",
+          "city" : "Rockbridge",
+          "state" : "Wyoming, 483"
+        }
+      }
+    ]
+  }
+}
