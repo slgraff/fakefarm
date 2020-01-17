@@ -15,7 +15,11 @@ defmodule Servy.Handler do
       |> String.split("\n")
       |> List.first
       |> String.split(" ")
-    %{ method: method, path: path, resp_body: "" }
+    %{ method: method,
+       path: path,
+       resp_body: "",
+       status: nil
+      }
   end
 
   def route(conv) do
@@ -28,6 +32,10 @@ defmodule Servy.Handler do
 
   def route(conv, "GET", "/bears") do
       %{ conv | resp_body: "Literacy is the foundation" }
+  end
+
+  def route(conv, _method, path) do
+    %{ conv | resp_body: "No #{path} here!"}
   end
 
   def format_response(conv) do
