@@ -17,3 +17,7 @@ IO.puts request |> String.split("\n") |> List.first
 # > ["GET /wildthings HTTP1/1", "Host: example.com",
 #  "User-Agent: ExampleBrowser/1.0", "Accept: */*", "", ""]
 
+
+conv = %{ method: "GET", path: "/wildlife" }
+
+%{path: "/wildlife" } = conv
