@@ -41,27 +41,29 @@ defmodule Servy.Handler do
   def log(conv), do: IO.inspect conv
 
 
-  def route(conv) do
-    route(conv, conv.method, conv.path)
-  end
+  # def route(conv) do
+  #   route(conv, conv.method, conv.path)
+  # end
 
-  def route(conv, "GET", "/wildthings") do
+  def route(%{method: "GET", path: "/wildthings"} = conv) do
       %{ conv | resp_body: "Waiting in the Wilderness", status: 200 }
   end
 
-  def route(conv, "GET", "/bears") do
+  def route(%{method: "GET", path: "/bears"} = conv) do
       %{ conv | resp_body: "Literacy is the foundation", status: 200 }
   end
 
-  def route(conv, "GET", "/genesis/" <> chapter) do
+  def route(%{method: "GET", path: "/genesis" <> chapter} = conv) do
     %{ conv | status: 200, resp_body: "Genesis #{chapter}, a great place to begin."}
   end
 
-  def route(conv, "DELETE", "/genesis/" <> chapter) do
+  def route(%{method: "DELETE", path: "/genesis" <> chapter} = conv) do
     %{ conv | status: 403, resp_body: "Genesis #{chapter}, is your loss"}
   end
 
-  def route(conv, _method, path) do
+  # catch all - whatever the path is, is not intended,
+  # and so we assign it to variable from conv.
+  def route(%{ path: path } = conv) do
     %{ conv | resp_body: "No #{path} here!", status: 404 }
   end
 
