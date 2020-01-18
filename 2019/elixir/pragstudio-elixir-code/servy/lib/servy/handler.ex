@@ -5,8 +5,32 @@ defmodule Servy.Handler do
     |> rewrite_path
     |> log
     |> route
+    |> track
     |> format_response
   end
+
+  def track(%{status: 404, path: path} = conv) do
+    IO.puts "Warning: #{path} is on the loose!"
+    conv
+  end
+
+  # Defaults are necessary when a pattern will not match
+  def track(conv), do: conv
+
+  def parse(request) do
+    [method, path, _] =
+      request
+      |> String.split("\n")
+      |> List.first
+      |> String.split(" ")
+
+    %{ method: method,
+       path: path,
+       resp_body: "",
+       status: nil
+      }
+  end
+
 
   def rewrite_path( %{path: "/wildlife"} = conv ) do
     %{ conv | path: "/wildthings" }
@@ -16,18 +40,6 @@ defmodule Servy.Handler do
 
   def log(conv), do: IO.inspect conv
 
-  def parse(request) do
-    [method, path, _] =
-      request
-      |> String.split("\n")
-      |> List.first
-      |> String.split(" ")
-    %{ method: method,
-       path: path,
-       resp_body: "",
-       status: nil
-      }
-  end
 
   def route(conv) do
     route(conv, conv.method, conv.path)
