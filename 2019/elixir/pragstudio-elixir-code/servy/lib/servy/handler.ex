@@ -225,38 +225,45 @@ end
 # IO.puts response
 
 
-request = """
-GET /pages/genesis HTTP/1.1
-Host: example.com
-User-Agent: ExampleBrowser/1.0
-Accept: */*
+# request = """
+# GET /pages/genesis HTTP/1.1
+# Host: example.com
+# User-Agent: ExampleBrowser/1.0
+# Accept: */*
 
-"""
+# """
 
 
-response = Servy.Handler.handle(request)
-IO.puts response
+# response = Servy.Handler.handle(request)
+# IO.puts response
+
+# IO.puts "--------"
+# IO.puts "THIS IS MY STRUCT"
+# s = %Shirt{price: 2, qty: 10}
+# x = Shirt.total(s)
+# IO.inspect s
+# IO.puts x
+# IO.puts "--------"
+
+
+# request = """
+# POST /bears HTTP/1.1
+# Host: example.com
+# User-Agent: ExampleBrowser/1.0
+# Accept: */*
+# Content-Type: application/x-www-form-urlencoded
+# Content-Length: 21
+
+# name=Baloo&type=Brown
+# """
+
+
+# response = Servy.Handler.handle(request)
+# IO.puts response
 
 IO.puts "--------"
-IO.puts "THIS IS MY STRUCT"
-s = %Shirt{price: 2, qty: 10}
-x = Shirt.total(s)
-IO.inspect s
-IO.puts x
+IO.puts "Let's do some math."
+Mathy.sum([5,4,3,2,1], 0)
+IO.inspect Mathy.triple([5,4,3,2,1])
+
 IO.puts "--------"
-
-
-request = """
-POST /bears HTTP/1.1
-Host: example.com
-User-Agent: ExampleBrowser/1.0
-Accept: */*
-Content-Type: application/x-www-form-urlencoded
-Content-Length: 21
-
-name=Baloo&type=Brown
-"""
-
-
-response = Servy.Handler.handle(request)
-IO.puts response
