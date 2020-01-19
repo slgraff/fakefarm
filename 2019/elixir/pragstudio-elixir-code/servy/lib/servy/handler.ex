@@ -3,13 +3,16 @@ defmodule Servy.Handler do
 
   @pages_page Path.expand("../../pages", __DIR__)
 
-  require Logger
+  # import will import other modules.
+  # running a file by itself will not load them
+  # but running as a mix project (iex -S mix)
+  # will load all necessary modules.
 
-  @doc """
-        @doc is for specific function documentaiton.
-        It can use the here doc format.
-        It is also useful for a specific function.
-      """
+  import Servy.Plugins, only: [rewrite_path: 1, log: 1, track: 1]
+
+  import Servy.Parser, only: [parse: 1]
+  import Servy.File, only: [handle_file: 2]
+
   def handle(request) do
     request
     |> parse
@@ -27,52 +30,6 @@ defmodule Servy.Handler do
   end
 
   def emojify(conv), do: conv
-
-  def track(%{status: 404} = conv) do
-    IO.puts Logger.info "My first logger message"
-    conv
-  end
-
-  # Defaults are necessary when a pattern will not match
-  def track(conv), do: conv
-
-  def parse(request) do
-    [method, path, _] =
-    request
-    |> String.split("\n")
-    |> List.first
-    |> String.split(" ")
-
-    %{ method: method,
-    path: path,
-    resp_body: "",
-    status: nil
-  }
-end
-
-  def rewrite_path( %{path: "/wildlife"} = conv ) do
-    %{ conv | path: "/wildthings" }
-  end
-
-  def rewrite_path( %{path: "/genesis?id=" <> chapter } = conv) do
-    %{ conv | path: "/genesis/#{chapter}"}
-  end
-
-  def rewrite_path(conv), do: conv
-
-  def log(conv), do: IO.inspect conv
-
-  def handle_file({:ok, contents}, conv) do
-    %{ conv | resp_body: contents, status: 200 }
-  end
-
-  def handle_file({:error, :enoent }, conv) do
-    %{ conv | resp_body: "File Not found", status: 404 }
-  end
-
-  def handle_file({:error, reason } , conv) do
-   %{ conv | resp_body: reason, status: 500 }
-  end
 
   def route(%{method: "GET", path: "/wildthings"} = conv) do
     %{ conv | resp_body: "Waiting in the Wilderness", status: 200 }
