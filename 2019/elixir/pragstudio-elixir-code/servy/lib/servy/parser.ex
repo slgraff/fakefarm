@@ -6,10 +6,8 @@ defmodule Servy.Parser do
     |> List.first
     |> String.split(" ")
 
-    %{ method: method,
-      path: path,
-      resp_body: "",
-      status: nil
+    %Servy.Conv{ method: method,
+      path: path
     }
   end
 end
