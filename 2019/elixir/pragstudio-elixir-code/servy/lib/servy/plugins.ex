@@ -1,22 +1,25 @@
 defmodule Servy.Plugins do
+  alias Servy.Conv
+
   require Logger
-  def track(%{status: 404} = conv) do
+
+  def track(%Conv{status: 404} = conv) do
     IO.puts Logger.info "My first logger message"
     conv
   end
 
   # Defaults are necessary when a pattern will not match
-  def track(conv), do: conv
+  def track(%Conv{} = conv), do: conv
 
-  def rewrite_path( %{path: "/wildlife"} = conv ) do
-    %{ conv | path: "/wildthings" }
+  def rewrite_path( %Conv{path: "/wildlife"} = conv ) do
+    %Conv{ conv | path: "/wildthings" }
   end
 
-  def rewrite_path( %{path: "/genesis?id=" <> chapter } = conv) do
-    %{ conv | path: "/genesis/#{chapter}"}
+  def rewrite_path( %Conv{path: "/genesis?id=" <> chapter } = conv) do
+    %Conv{ conv | path: "/genesis/#{chapter}"}
   end
 
-  def rewrite_path(conv), do: conv
+  def rewrite_path(%Conv{} = conv), do: conv
 
-  def log(conv), do: IO.inspect conv
+  def log(%Conv{} = conv), do: IO.inspect conv
 end

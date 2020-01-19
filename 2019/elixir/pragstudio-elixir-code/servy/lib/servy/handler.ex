@@ -1,6 +1,8 @@
 defmodule Servy.Handler do
   @moduledoc "This is module wide documentation"
 
+  alias Servy.Conv
+
   @pages_page Path.expand("../../pages", __DIR__)
 
   # import will import other modules.
@@ -24,46 +26,46 @@ defmodule Servy.Handler do
     |> format_response
   end
 
-  def emojify(%{status: 200 } = conv) do
+  def emojify(%Conv{status: 200 } = conv) do
     rb = "👋👋👋\n#{conv.resp_body}\n🤙🤙🤙"
     %{ conv | resp_body: rb }
   end
 
-  def emojify(conv), do: conv
+  def emojify(%Conv{} = conv), do: conv
 
-  def route(%{method: "GET", path: "/wildthings"} = conv) do
+  def route(%Conv{method: "GET", path: "/wildthings"} = conv) do
     %{ conv | resp_body: "Waiting in the Wilderness", status: 200 }
   end
 
-  def route(%{method: "GET", path: "/bears"} = conv) do
+  def route(%Conv{method: "GET", path: "/bears"} = conv) do
     %{ conv | resp_body: "Literacy is the foundation", status: 200 }
   end
 
-  def route(%{method: "GET", path: "/bears/new"} = conv) do
+  def route(%Conv{method: "GET", path: "/bears/new"} = conv) do
     @pages_page
     |> Path.join("form.html")
     |> File.read
-    |> handle_file(conv)
+    |> handle_file(%Conv{} = conv)
   end
 
-  def route(%{method: "GET", path: "/about"} = conv) do
+  def route(%Conv{method: "GET", path: "/about"} = conv) do
     @pages_page
     |> Path.join("about.html")
     |> File.read
-    |> handle_file(conv)
+    |> handle_file(%Conv{} = conv)
   end
 
-  # def route(%{method: "GET", path: "/pages" <> page } = conv) do
-  def route(%{method: "GET", path: "/pages" <> page } = conv) do
+  # def route(%Conv{method: "GET", path: "/pages" <> page } = conv) do
+  def route(%Conv{method: "GET", path: "/pages" <> page } = conv) do
     @pages_page
     |> Path.join("#{page}.html")
     |> File.read
-    |> handle_file(conv)
+    |> handle_file(%Conv{} = conv)
   end
 
   # route function using case statement approach instead of a multi-clause approach above.
 
-  # def route(%{method: "GET", path: "/about"} = conv) do
+  # def route(%Conv{method: "GET", path: "/about"} = conv) do
   #   file =
   #     Path.expand("../../pages/", __DIR__)
   #     |> Path.join("about.html")
@@ -78,39 +80,28 @@ defmodule Servy.Handler do
       # end
   # end
 
-    def route(%{method: "GET", path: "/genesis" <> chapter} = conv) do
+    def route(%Conv{method: "GET", path: "/genesis" <> chapter} = conv) do
       %{ conv | status: 200, resp_body: "Genesis #{chapter}, a great place to begin."}
     end
 
-    def route(%{method: "DELETE", path: "/genesis" <> chapter} = conv) do
+    def route(%Conv{method: "DELETE", path: "/genesis" <> chapter} = conv) do
       %{ conv | status: 403, resp_body: "Genesis #{chapter}, is your loss"}
     end
 
 # catch all - whatever the path is, is not intended,
 # and so we assign it to variable from conv.
-  def route(%{ path: path } = conv) do
+  def route(%Conv{ path: path } = conv) do
     %{ conv | resp_body: "No #{path} here!", status: 404 }
   end
 
-  def format_response(conv) do
+  def format_response(%Conv{} = conv) do
     """
-    HTTP/1.1 #{conv.status} #{status_response(conv.status)}
+    HTTP/1.1 #{Conv.full_status(conv)}
     Content-Type: text/html
     Content-Length: #{String.length(conv.resp_body)}
 
     #{conv.resp_body}
     """
-  end
-
-  defp status_response(code) do
-    %{
-      200 => "OK",
-      201 => "Created",
-      401 => "Unauthorized",
-      403 => "Forbidden",
-      404 => "Not Found",
-      500 => "Internal Server Error"
-      }[code]
   end
 end
 
@@ -238,4 +229,10 @@ Accept: */*
 
 response = Servy.Handler.handle(request)
 IO.puts response
+
+
+s = %Shirt{price: 2, qty: 10}
+x = Shirt.total(s)
+IO.inspect s
+IO.puts x
 

@@ -1,4 +1,13 @@
 defmodule Servy.Parser do
+
+
+  # Add an alias using as,
+  # alias Servy.Conv, as: Conv
+
+  # is same as just letting alias
+  # be the last item in 'dot' chain - 'Conv'
+  alias Servy.Conv
+
   def parse(request) do
     [method, path, _] =
     request
@@ -6,7 +15,7 @@ defmodule Servy.Parser do
     |> List.first
     |> String.split(" ")
 
-    %Servy.Conv{ method: method,
+    %Conv{ method: method,
       path: path
     }
   end
