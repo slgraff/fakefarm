@@ -41,6 +41,13 @@ defmodule Servy.Handler do
     %{ conv | resp_body: "Literacy is the foundation", status: 200 }
   end
 
+  def route(%Conv{method: "POST", path: "/bears"} = conv) do
+
+    %{ conv |
+              resp_body: "A #{conv.params["type"]} bear with name #{conv.params["name"]}.",
+              status: 201 }
+  end
+
   def route(%Conv{method: "GET", path: "/bears/new"} = conv) do
     @pages_page
     |> Path.join("form.html")
@@ -230,9 +237,26 @@ Accept: */*
 response = Servy.Handler.handle(request)
 IO.puts response
 
-
+IO.puts "--------"
+IO.puts "THIS IS MY STRUCT"
 s = %Shirt{price: 2, qty: 10}
 x = Shirt.total(s)
 IO.inspect s
 IO.puts x
+IO.puts "--------"
 
+
+request = """
+POST /bears HTTP/1.1
+Host: example.com
+User-Agent: ExampleBrowser/1.0
+Accept: */*
+Content-Type: application/x-www-form-urlencoded
+Content-Length: 21
+
+name=Baloo&type=Brown
+"""
+
+
+response = Servy.Handler.handle(request)
+IO.puts response
