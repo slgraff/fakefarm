@@ -18,5 +18,22 @@ defmodule Mathy do
   end
 
   def triple([]), do: []
+end
 
+defmodule Recurse do
+  # 1. think of lists as head/tail
+  #
+  def my_map([head|tail], fun) do
+    [fun.(head) | my_map(tail, fun)]
+  end
+
+  def my_map([], _fun), do: []
+end
+
+defmodule Mappy do
+  def ca([head | tail], func) do
+    [func.(head) | ca(tail, func)]
+  end
+
+  def ca([], _func), do: []
 end
