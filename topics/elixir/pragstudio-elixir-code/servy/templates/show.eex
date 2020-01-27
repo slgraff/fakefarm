@@ -1,0 +1,4 @@
+<h1>Show Bear</h1>
+
+
+<li><%= bear.name %> is <%= bear.hibernating %>!!</li>
