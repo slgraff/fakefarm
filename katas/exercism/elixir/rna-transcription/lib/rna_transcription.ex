@@ -9,14 +9,27 @@ defmodule RnaTranscription do
   """
 
   def to_rna(char) do
+    stringify_codepoint(char)
+    |> make_conversion
+    |> codepoint_string
+  end
+
+  def codepoint_string(char) do
+    String.to_charlist(char)
+  end
+
+  def stringify_codepoint(char) do
     List.to_string(char)
     |> String.split("")
     |> Enum.reject( &(&1 == "") )
-    |> convert
-    |> String.to_charlist
   end
 
-  def convert([head | tail]) do
+  def make_conversion(code) do
+    Enum.map(code, fn(c) -> convert(c) end)
+    |> List.to_string
+  end
+
+  def convert(head) do
     case head do
       "G" -> "C"
       "C" -> "G"
