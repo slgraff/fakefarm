@@ -14,10 +14,6 @@ defmodule RnaTranscription do
     |> codepoint_string
   end
 
-  def codepoint_string(char) do
-    String.to_charlist(char)
-  end
-
   def stringify_codepoint(char) do
     List.to_string(char)
     |> String.split("")
@@ -38,27 +34,7 @@ defmodule RnaTranscription do
     end
   end
 
-
-
-  #
-
-  # @spec to_rna([char]) :: [char]
-  # def to_rna(dna) do
-  #   divide_string(dna)
-  #   |> Enum.map(dna, fn(s) -> convert(s) end)
-  # end
-
-
-  # def divide_string(str) do
-  #   String.codepoints(str)
-  # end
-
-  # def convert(dna) do
-  #   cond do
-  #     dna == 'G' -> 'C'
-  #     dna == 'C' -> 'G'
-  #     dna == 'T' -> 'A'
-  #     dna == 'A' -> 'U'
-  #   end
-  # end
+  def codepoint_string(char) do
+    String.to_charlist(char)
+  end
 end
