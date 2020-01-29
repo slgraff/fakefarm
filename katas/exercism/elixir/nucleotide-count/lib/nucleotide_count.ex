@@ -15,23 +15,15 @@ defmodule NucleotideCount do
   @spec count(charlist(), char()) :: non_neg_integer()
 
   def count(strand, nucleotide) do
-    Enum.reduce(strand, 0, fn x, acc -> acc + check(x, nucleotide) end)
+    Enum.reduce(strand, 0, &(&2 + compare(&1, nucleotide)))
   end
 
-  # defp compare()
-
-  def check(strand, compare) do
+  defp compare(strand, compare) do
     cond do
       strand == compare -> 1
       strand != compare -> 0
     end
   end
-
-  def split([head|tail], nucleotide) do
-    head == nucleotide
-  end
-
-  def split([]), do: []
 
   @doc """
   Returns a summary of counts by nucleotide.
@@ -43,5 +35,11 @@ defmodule NucleotideCount do
   """
   @spec histogram(charlist()) :: map()
   def histogram(strand) do
+    %{
+      ?A => Enum.count(strand, &(&1 == ?A)),
+      ?T => Enum.count(strand, &(&1 == ?T)),
+      ?C => Enum.count(strand, &(&1 == ?C)),
+      ?G => Enum.count(strand, &(&1 == ?G))
+    }
   end
 end
