@@ -48,6 +48,15 @@ defmodule Servy.Parser do
 
   def parse_headers(headers), do: headers
 
+  @doc """
+    Parses the given param of the form `key1=value1&key2=value2`
+
+    ## Examples
+      iex> params_string = "name=Fake&type=Farm"
+      iex> Servy.Parser.parse_params("application/x-www-form-urlencoded", params_string)
+      %{"name"=>"Fake", "type"=> "Farm"}
+  """
+
   def parse_params("application/x-www-form-urlencoded", params_string) do
     params_string |> String.trim |> URI.decode_query
   end
