@@ -23,7 +23,6 @@ defmodule Servy.Handler do
     |> log
     |> route
     |> track
-    |> emojify
     |> format_response
   end
 
@@ -35,7 +34,7 @@ defmodule Servy.Handler do
   def emojify(%Conv{} = conv), do: conv
 
   def route(%Conv{method: "GET", path: "/wildthings"} = conv) do
-    %{ conv | resp_body: "Waiting in the Wilderness", status: 200 }
+    %{ conv | resp_body: "Bears, Lions, Tigers", status: 200 }
   end
 
   def route(%Conv{method: "GET", path: "/bears"} = conv) do
@@ -116,207 +115,11 @@ defmodule Servy.Handler do
 
   def format_response(%Conv{} = conv) do
     """
-    HTTP/1.1 #{Conv.full_status(conv)}
-    Content-Type: text/html
-    Content-Length: #{String.length(conv.resp_body)}
-
+    HTTP/1.1 #{Conv.full_status(conv)}\r
+    Content-Type: text/html\r
+    Content-Length: #{String.length(conv.resp_body)}\r
+    \r
     #{conv.resp_body}
     """
   end
 end
-
-# request = """
-# GET /bears/new HTTP/1.1
-# Host: example.com
-# User-Agent: ExampleBrowser/1.0
-# Accept: */*
-
-# """
-
-# response = Servy.Handler.handle(request)
-# IO.puts response
-
-
-# request = """
-# GET /genesis?id=1 HTTP/1.1
-# Host: example.com
-# User-Agent: ExampleBrowser/1.0
-# Accept: */*
-
-# """
-
-
-# response = Servy.Handler.handle(request)
-# IO.puts response
-
-# request = """
-# GET /wildthings HTTP1/1
-# Host: example.com
-# User-Agent: ExampleBrowser/1.0
-# Accept: */*
-
-# """
-
-
-# response = Servy.Handler.handle(request)
-# IO.puts response
-
-request = """
-GET /bears HTTP1/1
-Host: example.com
-User-Agent: ExampleBrowser/1.0
-Accept: */*
-
-"""
-
-
-response = Servy.Handler.handle(request)
-IO.puts response
-
-# request = """
-# GET /zion HTTP1/1
-# Host: example.com
-# User-Agent: ExampleBrowser/1.0
-# Accept: */*
-
-# """
-
-
-# response = Servy.Handler.handle(request)
-# IO.puts response
-
-# request = """
-# GET /genesis/1 HTTP1/1
-# Host: example.com
-# User-Agent: ExampleBrowser/1.0
-# Accept: */*
-
-# """
-
-
-# response = Servy.Handler.handle(request)
-# IO.puts response
-
-# request = """
-# DELETE /genesis/1 HTTP/1.1
-# Host: example.com
-# User-Agent: ExampleBrowser/1.0
-# Accept: */*
-
-# """
-
-
-# response = Servy.Handler.handle(request)
-# IO.puts response
-
-# request = """
-# GET /wildlife HTTP/1.1
-# Host: example.com
-# User-Agent: ExampleBrowser/1.0
-# Accept: */*
-
-# """
-
-
-# response = Servy.Handler.handle(request)
-# IO.puts response
-
-
-# response = Servy.Handler.handle(request)
-# IO.puts response
-
-# request = """
-# GET /about HTTP/1.1
-# Host: example.com
-# User-Agent: ExampleBrowser/1.0
-# Accept: */*
-
-# """
-
-
-# response = Servy.Handler.handle(request)
-# IO.puts response
-
-
-# request = """
-# GET /pages/genesis HTTP/1.1
-# Host: example.com
-# User-Agent: ExampleBrowser/1.0
-# Accept: */*
-
-# """
-
-
-# response = Servy.Handler.handle(request)
-# IO.puts response
-
-# IO.puts "--------"
-# IO.puts "THIS IS MY STRUCT"
-# s = %Shirt{price: 2, qty: 10}
-# x = Shirt.total(s)
-# IO.inspect s
-# IO.puts x
-# IO.puts "--------"
-
-
-# request = """
-# POST /bears HTTP/1.1
-# Host: example.com
-# User-Agent: ExampleBrowser/1.0
-# Accept: */*
-# Content-Type: application/x-www-form-urlencoded
-# Content-Length: 21
-
-# name=Baloo&type=Brown
-# """
-
-
-# response = Servy.Handler.handle(request)
-# IO.puts response
-
-# IO.puts "--------"
-# IO.puts "Let's do some math."
-# Mathy.sum([5,4,3,2,1], 0)
-# IO.inspect Mathy.triple([5,4,3,2,1])
-
-# IO.puts "--------"
-
-# request = """
-# GET /bears HTTP/1.1
-# Host: example.com
-# User-Agent: ExampleBrowser/1.0
-# Accept: */*
-# Content-Type: application/x-www-form-urlencoded
-# Content-Length: 21
-
-# """
-
-
-# response = Servy.Handler.handle(request)
-# IO.puts response
-
-request = """
-GET /bears/1 HTTP/1.1
-Host: example.com
-User-Agent: ExampleBrowser/1.0
-Accept: */*
-
-"""
-
-response = Servy.Handler.handle(request)
-IO.puts response
-
-
-# IO.puts("-----------------------")
-
-# request = """
-# DELETE /bears/1 HTTP/1.1
-# Host: example.com
-# User-Agent: ExampleBrowser/1.0
-# Accept: */*
-
-# """
-
-
-# response = Servy.Handler.handle(request)
-# IO.puts response

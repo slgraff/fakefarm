@@ -18,6 +18,8 @@ defmodule Servy.BearController do
         %{ conv |
               resp_body: "A #{type} bear with name #{name}.",
               status: 201 }
+
+        %{ conv | resp_body: "Created a #{type} bear named #{name}!", status: 201}
   end
 
   def delete(conv, %{ "id" => id }) do
