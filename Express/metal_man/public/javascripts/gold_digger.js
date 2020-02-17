@@ -7,6 +7,16 @@ class GoldDigger {
     return this.scrape()
   }
 
+  scrape2(cb) {
+    https.get(ENDPOINT, (res) => {
+      res.on('data', (d) => {
+        return cb(null, d)
+      });
+    }).on('error', (e) => {
+      return cb(e)
+    });
+  }
+
   scrape() {
     return new Promise(function (resolve, reject) {
     https.get(ENDPOINT, (res) => {

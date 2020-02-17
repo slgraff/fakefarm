@@ -4,10 +4,27 @@ const GoldDigger = require('../public/javascripts/gold_digger')
 
 // visit: 3001
 
+router.get('/3', function (req,res, next) {
+  const gd = new GoldDigger();
+  gd.scrape2(function(err, data) {
+    if(err) return next(err);
+    res.set('Content-Type', 'text/html')
+    res.send(data);
+  })
+
+})
+
 // 3. Merge template and http call
-router.get('/', async function(req, res, next) {
+router.get('/', function(req, res, next) {
   const title = 'Metal Man'
-  res.render('index', {title: title, prices: 'coming soon'});
+
+  const gd = new GoldDigger();
+  gd.scrape2(function(err, data) {
+    if(err) return next(err);
+    res.render('index', {title: title, prices: data});
+  })
+
+
 });
 
 
