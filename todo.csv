@@ -1,0 +1,18 @@
+item,topic,asset,url
+99 bottles,ruby,pdf,
+js course,js,video,
+deep dive docker,docker,course,https://linuxacademy.com/course/docker-deep-dive-part-1
+,algorithms,,
+,data structures,,
+,bash,,
+battle ship,kata,,
+roman numeral,kata,,
+advanced git,git,video,pluralsight
+prag prog rails,rails,video,prag prog
+prag prog ruby,ruby,video,prag prog
+prag prog ruby blocks,ruby,video,prag prog
+elixir prag prog,elixir,video,prag prog
+refactoring,ruby,book,
+docker for rails devs,docker,book,
+design patterns GOF,craftsmanship,book,
+
