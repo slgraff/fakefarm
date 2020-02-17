@@ -1,0 +1,11 @@
+{
+  "name": "express_essential_training",
+  "version": "1.0.0",
+  "description": "an npm essential training by lynda",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "dadzoo",
+  "license": "ISC"
+}
