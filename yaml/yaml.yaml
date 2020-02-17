@@ -1,0 +1,100 @@
+---
+
+apple: &apple
+  red: red
+
+path:
+  color: ! my apple is <%= red %>
+
+  # path1: &path1
+  #   GeocodeUrl: https://qaapih1.int.aetna.com/healthcare/qapath1/v3/geocode
+
+  # devpath1: &devpath1
+  #   <<: *path1
+  #   MemberNetworksUrl: member-networks-api1.dev.aetnadigital.net
+  #   ProviderParStatusUrl: qaapih1.int.aetna.com/healthcare/qapath1/v3
+
+
+
+
+
+
+# key: value
+# another_key: Another value
+# a_number: 100
+# scientific_notation: 1e+12
+# bool: true
+# a_null: null
+# key with spaces: value
+# however: 'a string, enclosed in quotes'
+# single quotes: 'have ''one'' escape pattern'
+# double quotes: "Have many: \", \0, \t'"
+# literal_block: |
+#   This is an entire block of text will be the falue of a 'literal block',
+#   with line breaks being preserved.
+
+#   The literal continues
+
+#     and lines more indented keey the indentation
+# folded_style: >
+#   This entire block of text will be the value of 'folded_style', but
+#   this, all newlines will be
+
+#   Blank lines
+
+#     more indented means what? - what happens?
+
+# a_nestste_map:
+#   key: boom
+#   pow: explode
+#   deeper:
+#     oh: exploration
+
+# 0.235: a float key
+
+# ? |
+#   this is a key
+#   that has multiple lines
+# : and this is the value
+
+# a_sequence:
+#   - item
+#   - two
+#   - key: value
+#     another: value
+#   - what about now?
+#   - - Nested sequence indicator
+#     - boom
+
+
+# anchor: &anchor2 This is a thing
+# other_anchor: *anchor2
+
+# base: &base
+#   name: everyone has the same name
+
+# foo: &foo
+#   <<: *base
+#   age: 10
+
+# bar: &bar
+#   <<: *base
+#   age: 20
+
+# bam: *foo
+
+# set:
+#   ? item1
+# or: {item2}
+
+# set2:
+#   item1: null
+
+# Description: Clinical Providers Service
+
+# Parameters:
+#   StackContext:
+#     Type: String
+
+# SecurityGroups:
+#       - 'Fn::ImportValue': !Sub '${StackContext}-HttpSecurityGroupId'

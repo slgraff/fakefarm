@@ -1,0 +1,28 @@
+sections:
+  -
+    title: 'JavaScript'
+    summary: 'the bread and butter'
+    tags:
+      - 'JS ninja'
+  -
+    title: 'Browser'
+    summary: 'I want to get do end to end testing'
+    tags:
+      - 'local storage'
+  -
+    title: 'CSS & UX'
+    summary: "Rake is a great tool and I've wanted to get better at it."
+    tags:
+      - styling
+  -
+    title: 'Testing'
+    summary: "Wanting to learn to test"
+    tags:
+      - jasmine
+
+ignore:
+  words:
+    - merge
+    - fix
+    - typo
+
