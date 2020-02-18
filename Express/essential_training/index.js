@@ -4,6 +4,14 @@ import data from './data/data.json'
 const app = express();
 const PORT = 3000;
 
+// use is the term to introduce middleware.
+// if there is not path, then it will hinge on '/'
+app.use(express.static('public'));
+
+// apply a path like so.
+app.use('/img', express.static('img'))
+
+
 app.get('/', (req, res) => {
   // normally, get data first
   res.json(data)
