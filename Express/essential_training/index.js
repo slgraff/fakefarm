@@ -5,7 +5,8 @@ const app = express();
 const PORT = 3000;
 
 app.get('/', (req, res) => {
-
+  // normally, get data first
+  res.json(data)
 });
 
 app.post('/newItem', (req, res) => {
