@@ -2,12 +2,133 @@
 <html>
 <head>
   <title>fake farm</title>
+  <style>
+
+    body {
+      margin: 0;
+      padding: 0;
+      background: #FF6D48;
+    }
+
+    main {
+      padding: 0.25em;
+      font-family: courier;
+    }
+
+    .flag {
+      background: white;
+      padding: 5px 15px;
+    }
+
+    h2 {
+      font-weight: 100;
+      color: tomato;
+    }
+
+    .pol {
+      border-left: 15px solid black;
+      height: 600px;
+    }
+
+    .hero {
+      position: relative;
+      height: 300px;
+      overflow: hidden;
+    }
+
+    .hero img {
+      position: absolute;
+      width: 100%
+    }
+
+    @media (min-width: 600px) {
+      main {
+        padding: 4em;
+      }
+
+      main p {
+        line-height: 30px;
+      }
+
+      .flag {
+        padding: 1em;
+      }
+
+
+      .hero {/*height: 300px;*/ }
+      .hero img {
+        top: -180px;
+      }
+    }
+
+    @media (min-width: 1000px) {
+      .hero img {
+        top: -400px;
+      }
+    }
+
+
+    /*
+      2020-02-18
+      This is Fake Farm Vol 2, Issue 1.
+      Here goes... 😬
+
+      👋 Hello World!
+      During this proejct I want to learn:
+        - [] the css flex
+        - [] css grid
+
+    */
+  </style>
 </head>
 <body>
-  <h1>Fake Farm</h1>
-  <a href="/fakefarm">former fake farm</a>
-  <p>
-    Pet Projects by <a href="http://www.davewoodall.com">Dave Woodall</a>
-  </p>
+  <div class="hero">
+    <div class="col">
+      <div class="cols"></div>
+      <div class="cols">
+        <img src="/VOLT/Photos/0/hero.jpg" alt="">
+      </div>
+    </div>
+  </div>
+  <main>
+    <article class="article">
+      <p>
+        Call me paranoid, but you can't rely on a single technology as a savior. That's what this site is. Rather, this is the first edition. I am motivated to keep it alive. It doesn't have all the fancy tools that <a href="http://and.or.at">and-img('/Photos/0/logo-and.jpg') | &amp;</a> has. But that's okay. It's been a long journey since I last worked on this project. 6 years to be exact. I'm excited to dig through the archives. Imagine writing some kind of front-end framework for blogging this way in ruby. What would the angle be? Imagine that all this template just has to be `<.volt>`. If you use a volt file, it runs ruby into JS. Then, you can code with ruby and make cool pages. It would be like doing PHP, but with ... R... U-B-Y.
+
+        Okay. now that we have that covered. Here are the things that it needs to be out of the box:
+
+        - markdown
+        - configurable
+        - pure html
+        - partials
+        - js magic libraries stuff for UI components to do things that bloggers like to do. What &AND does on Nanoc. It can be run on the nanoc engine. And guess what, it's Ruby! It would be like me building a Rails, but less, and on top of more infrastructure. But what does it buy?
+      </p>
+      <div class="pol">
+        <div class="flag">
+          <h1>Flag</h1>
+          <h2>Links</h2>
+          <ul>
+            <li>
+                <a href="/fakefarm">former fake farm</a>
+            </li>
+          </ul>
+          <h2>Credits</h2>
+          <p>
+            Pet Projects by <a href="http://www.davewoodall.com">Dave Woodall</a>
+          </p>
+
+          <h2>TODO</h2>
+          <ul>
+            <li>
+              push
+            </li>
+            <li>
+              go to bed
+            </li>
+          </ul>
+        </div>
+      </div>
+    </article>
+  </main>
 </body>
 </html>
