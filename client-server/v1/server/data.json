@@ -1,0 +1,8 @@
+[{
+  "title":"Intro",
+  "body": "A full stack developer is responsible for both sides of the process. Those two sides are client and server. A client is a person (or robot) requesting information. Hence, it is called a \"request\". The other side of the agreement is the \"server\", which is responsible for responding to the requestor, hence known as a 'request-response' lifecycle."
+},
+{
+  "title":"Version 1",
+  "body": "The easiest way to start is to have static data. In this first demo, the data (these words) are already prepared on teh client. The reality is they are not."
+}]
