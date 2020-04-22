@@ -1,4 +1,7 @@
+require 'nokogiri'
+require 'open-uri'
 require 'json'
+
 def strong(t)
   if t.children[0].children[0].children[0].attributes['title'].nil?
   else
@@ -29,24 +32,18 @@ def total(t)
   end
 end
 
-# _dw TODO;
-# align the book names with url
-# get the chapters per verse
-# save as json
-# save as repo
-
-require 'nokogiri'
-require 'open-uri'
+# _dw fix Isaiah 3:10
 
 scripture = [
-{ book: 'genesis', chapter: [31, 25] }
+# { book: 'genesis', chapter: [31, 25] }
+{ book: 'isaiah', chapter: [31, 22, 26] }
 ]
 
 
 scripture.each do |book|
   b = book[:book]
   book[:chapter].each_with_index do |c,i|
-    next if i == 0
+    i +=  1
     c.times do |n|
       n += 1
       doc = Nokogiri::HTML(open("https://biblehub.com/text/#{b}/#{i}-#{n}.htm"))
