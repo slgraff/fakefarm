@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>fake farm</title>
+  <style>
+
+    body {
+      margin: 0;
+      padding: 0;
+      background: #FF6D48;
+      background-image: linear-gradient(-90deg, #D03109, #FD8666);
+    }
+
+    main {
+      padding: 0.25em;
+      font-family: courier;
+    }
+
+    .flag {
+      background: white;
+      padding: 5px 15px;
+    }
+
+    h2 {
+      font-weight: 100;
+      color: tomato;
+    }
+
+    .pol {
+      border-left: 15px solid black;
+      height: 600px;
+    }
+
+    .hero {
+      position: relative;
+      height: 300px;
+      overflow: hidden;
+      border-bottom: 10px solid black;
+    }
+
+    .hero img {
+      position: absolute;
+      width: 100%
+    }
+
+    @media (min-width: 600px) {
+      main {
+        padding: 4em;
+      }
+
+      h1 {
+        font-size: 3em;
+        margin: 0;
+      }
+
+      main p {
+        line-height: 30px;
+      }
+
+      .flag {
+        padding: 1em;
+      }
+
+      .hero {/*height: 300px;*/ }
+      .hero img {
+        top: -180px;
+      }
+    }
+
+    @media (min-width: 1000px) {
+      h1 {
+        font-size: 4em;
+      }
+      .hero img {
+        top: -400px;
+      }
+      .hero {
+        border-bottom: 20px solid black
+      }
+
+
+    }
+
+
+    /*
+      2020-02-18
+      This is Fake Farm Vol 2, Issue 1.
+      Here goes... 😬
+
+      👋 Hello World!
+      During this proejct I want to learn:
+        - [] the css flex
+        - [] css grid
+
+    */
+    .cols {
+      display: flex;
+    }
+    .col {
+      background: white;
+    }
+  </style>
+</head>
+<body>
+  <div class="hero">
+    <div class="cols">
+      <div class="col"></div>
+      <div class="col">
+        <img src="/VOLT/Photos/0/hero.jpg" alt="">
+      </div>
+    </div>
+  </div>
+  <main>
+    <article class="article">
+      <h1>and.or.at/TTT</h1>
+      <h2>Thop Then Thom</h2>
+      <h3>The best 10 TY tracks</h3>
+      <section class='cols'>
+        <div class="col">
+          <iframe src="https://open.spotify.com/embed/playlist/1uWj4XQuHveXUyYUZtx6Mv" width="300" height="380" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe>
+        </div>
+        <div class="col">
+          <header>
+            <h1>Hello World!</h1>
+            <p>
+              This is a new music site by <a href="https://twitter.com/jonze" target="_blank">@jonze</a>, and <a href="https://twitter.com/sortpop" target="_blank">@sortpop</a>
+            </p>
+          </header>
+          <article>
+            <h2>The top 3 nap albums</h2>
+            <ul>
+              <li>1. beck's, <a href="https://open.spotify.com/album/5ieP11rJQvuYz0Ov3k03cy?si=rgOpMqAKRI262gOw3EdnIA" target="_blank">sea change</a></li>
+              <li>2. <a href="https://open.spotify.com/album/4Y2uuyWPNZb8HQyAytY9PU?si=WwMzGtaKRDuN02MjfREqCA" target="_blank">phillip selway's first</a></li>
+              <li>3. <a href="https://open.spotify.com/album/6CZAmHVNFiaIYlC8DuRB3j?si=7Gri93nmQpCGHak0Ror7jw" target="_blank">mojave 3 | Ask Me Tomorrow</a></li>
+
+            </ul>
+          </article>
+        </div>
+      </section>
+      <p>
+
+      </p>
+      <h1>Radiohead without ears</h1>
+      <div class="time">2020-02-19 12:10am</div>
+      <p>
+        I've been up about 24 hours. The strain is creeping in. Call me paranoid, but you can't rely on a single technology as a savior. I started fakefarm 6 years ago. It's a code journal. I have a personal journal where I practice becoming an author by data dumping everything I can think of about myself. That site is called <a href="http://and.or.at">and &amp;</a>
+      </p>
+      <div class="pol">
+        <div class="flag">
+          <h1>Surrender Flag</h1>
+          <h2>Links</h2>
+          <ul>
+            <li>
+                Visit the first <a href="/fakefarm">fake farm</a>
+            </li>
+          </ul>
+          <h2>Credits</h2>
+          <p>
+            Pet Projects by <a href="http://www.davewoodall.com">Dave Woodall</a>
+          </p>
+          <p>
+            Visit the code <a href="https://github.com/fakefarm/fakefarm/" target="_blank">repo</a>
+          </p>
+
+          <h2>TODO</h2>
+          <ul>
+            <li>
+              push
+            </li>
+            <li>
+              go to bed
+            </li>
+          </ul>
+        </div>
+      </div>
+    </article>
+  </main>
+</body>
+</html>
