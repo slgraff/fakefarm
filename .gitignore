@@ -1,6 +1,6 @@
 .DS_Store
 /2019/elixir/pragstudio-elixir-code/video-code/*
-
+/bible/.bundle
 # Logs
 logs
 *.log
