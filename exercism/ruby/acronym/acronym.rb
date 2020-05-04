@@ -1,4 +1,3 @@
-require 'pry'
 class Acronym
   def self.abbreviate(sentence)
     new(sentence).abbreviate

@@ -24,7 +24,6 @@ class AcronymTest < Minitest::Test
   end
 
   def test_punctuation_without_whitespace
-    skip
     assert_equal "CMOS", Acronym.abbreviate('Complementary metal-oxide semiconductor')
   end
 

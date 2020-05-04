@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Keyshape -->
+<svg xmlns="http://www.w3.org/2000/svg" shape-rendering="geometricPrecision" text-rendering="geometricPrecision" viewBox="0 0 1131 457" style="white-space: pre;">
+    <style>
+@keyframes a0_t { 0% { transform: translate(199px,185.117058px) rotate(0deg) translate(-164.5px,-164.5px); } 13.3333% { transform: translate(199px,185.117058px) rotate(1.44deg) translate(-164.5px,-164.5px); } 35.5555% { transform: translate(199px,185.117058px) rotate(3.84deg) translate(-164.5px,-35.5px); } 55.5555% { transform: translate(199px,185.117058px) rotate(6deg) translate(-164.5px,-35.5px); } 100% { transform: translate(199px,185.117058px) rotate(6deg) translate(-164.5px,-35.5px); } }
+@keyframes a0_w { 0% { width: 329px; } 13.3333% { width: 329px; } 35.5556% { width: 1017px; } 100% { width: 1017px; } }
+@keyframes a0_h { 0% { height: 329px; } 13.3333% { height: 329px; } 35.5556% { height: 71px; } 100% { height: 71px; } }
+@keyframes a1_t { 0% { transform: translate(199.000007px,185.117065px) rotate(0deg) translate(-125.5px,-125.5px); } 28.8888% { transform: translate(214.170581px,183px) rotate(-3.666667deg) translate(-125.5px,-125.5px); } 37.7777% { transform: translate(231.5px,252.5px) rotate(-4.794872deg) translate(-125.5px,-125.5px); } 53.3333% { transform: translate(716.099988px,200.444906px) rotate(-6.769231deg) translate(-658.9px,-77.9px); } 60% { transform: translate(925.5px,252.5px) rotate(-7.615385deg) translate(-887.5px,-57.5px); } 71.1111% { transform: translate(523.5px,420px) rotate(-9.025641deg) translate(-485.5px,-225px); } 80% { transform: translate(384px,111px) rotate(-10.153846deg) translate(-346px,84px); } 86.6666% { transform: translate(595.5px,203.5px) rotate(-11deg) translate(-559.339253px,-68.571525px); } 100% { transform: translate(590.477211px,186.700984px) rotate(-11deg) translate(-559.339253px,-68.571525px); } }
+@keyframes a1_w { 0% { width: 251px; } 37.7778% { width: 251px; } 60% { width: 1075px; } 100% { width: 1075px; } }
+@keyframes a1_h { 0% { height: 251px; } 37.7778% { height: 251px; } 60% { height: 115px; } 100% { height: 115px; } }
+    </style>
+    <rect width="329" height="329" fill="#418978" stroke-miterlimit="2" stroke-linecap="square" stroke-linejoin="round" stroke="none" transform="translate(199,185.117) translate(-164.5,-164.5)" style="animation: 4.5s linear both a0_t, 4.5s linear both a0_w, 4.5s linear both a0_h;"/>
+    <rect width="251" height="251" fill="#7de3c9" stroke-miterlimit="2" stroke-linecap="square" stroke-linejoin="round" stroke="none" transform="translate(199,185.117) translate(-125.5,-125.5)" style="mix-blend-mode: color-burn; animation: 4.5s linear both a1_t, 4.5s linear both a1_w, 4.5s linear both a1_h;"/>
+</svg>
