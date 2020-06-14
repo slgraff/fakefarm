@@ -1,0 +1,1 @@
+{:book=>"genesis", :ch=>1, :v=>4}
