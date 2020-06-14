@@ -1,0 +1,9 @@
+task :hello do
+  puts 'hello world!'
+end
+
+task :world do
+  puts 'Read the Torah!'
+end
+
+task :world => :hello
