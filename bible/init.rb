@@ -1,7 +1,8 @@
 require 'nokogiri'
 require 'open-uri'
 require 'json'
-
+require_relative './bible_chapter_verse_count'
+puts 'here we go...'
 def strong(t)
   if t.children[0].children[0].children[0].attributes['title'].nil?
   else
@@ -37,33 +38,62 @@ end
 # - [ ] create a checksum for last successful verse so that when it errors out, I can know which one it is/was.
 # - [ ]
 
-scripture = [
-# ['genesis', %w(31  25
-{ book: 'genesis', chapter: [31, 25] }
-{ book: 'isaiah', chapter: [31, 22, 26] }
-]
+# scripture = [
+#   { book: 'genesis', chapter: [1] },
+#   { book: 'isaiah', chapter: [1] }
+# ]
 
+LAST_SUCCESS = eval(File.read('last_success.rb'))
 
-scripture.each do |book|
-  b = book[:book]
-  book[:chapter].each_with_index do |c,i|
+def last_chapter(chapters)
+end
+
+Toc.new.list do |book|
+  # book
+  b = book[0]
+  puts "#{b}"
+  # loop through each verse of each chapter
+  last_chapter(book[1]).each_with_index do |c,i|
+    puts "#{i}, #{c}"
+    # make sure index is 1 based
     i +=  1
-    c.times do |n|
+    # loop through each chapter
+    c.to_i.times do |n|
       n += 1
-
-      doc = Nokogiri::HTML(open("https://biblehub.com/text/#{b}/#{i}-#{n}.htm"))
-      verses = Nokogiri::HTML(open("https://biblehub.com/#{b}/#{i}-#{n}.htm"))
+      # make sure number is 1 based
 
 
+      doc = Doc.new(b,i,n).doc
 
+      puts "downloaded: #{b}/#{i}-#{n}"
+      verses = Cat.new(b,i,n).verses
+
+
+      puts "downloaded verses."
+      require 'pry'; binding.pry
       v = verses.xpath('//*[@id="leftbox"]')
 
       table = doc.xpath("//table//tr//td//table")[5].children.children.first.children.first
-      File.write("#{b}_#{i}_#{n}.html", table)
+
+      i_p = '%02d' % i.to_s
+      n_p = '%02d' % n.to_s
+
+      book_path = File.join(".", "downloads", "#{b}")
+      chap_path = File.join(book_path, "#{i_p}")
+      verse_path = File.join(chap_path, "#{n_p}" )
+
+      Dir.mkdir(book_path) unless Dir.exists?(book_path)
+      Dir.mkdir(chap_path) unless Dir.exists?(chap_path)
+      Dir.mkdir(verse_path) unless Dir.exists?(verse_path)
+
+      html = File.join(verse_path, "#{n_p}.html")
+      File.write(html, table)
+
       @translations = []
       @versions = []
       @words = []
       table.children[1..-1].each do |t|
+        next if t.children[2].children[0].nil?
         word = {
           source: {
             book: b,
@@ -88,6 +118,7 @@ scripture.each do |book|
         }
         @words << word
       end
+      puts "Words finished for puts #{b}/#{i}-#{n}"
 
       v[0].children[0].children[0..1][1..1].each do |vv|
 
@@ -112,9 +143,30 @@ scripture.each do |book|
         words: @words,
         versions: @translations
       }
+      puts "Writing #{b}/#{i}-#{n}"
 
-      File.write("#{b}_#{i}_#{n}.rb", scripture)
-      File.write("#{b}_#{i}_#{n}.json", scripture.to_json)
+      book_path_rb = File.join(".", "downloads", "rb", "#{b}")
+      chap_path_rb = File.join(".", "downloads", "rb", "#{b}", "#{i}")
+
+      #rb
+      # scripture
+
+      rb = File.join(verse_path, "#{n_p}.rb")
+      File.write(rb, scripture)
+
+      json = File.join(verse_path, "#{n_p}.json")
+      File.write(json, scripture.to_json)
+
+
+      last_success = {
+        book: b,
+        ch: i,
+        ch_index: i - 1,
+        v: n,
+        vs_index: n - 1
+      }
+
+      File.write("last_success.rb", last_success)
     end
   end
 end
