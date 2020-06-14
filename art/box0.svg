@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Keyshape -->
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 112 32" text-rendering="geometricPrecision" shape-rendering="geometricPrecision" style="white-space: pre;">
+    <style>
+@keyframes a0_t { 0% { transform: translate(0.4px,0.1px); } 86.6666% { transform: translate(0.1px,0.3px); } 100% { transform: translate(0px,0px); } }
+@keyframes a0_w { 0% { width: 1px; animation-timing-function: cubic-bezier(0.975,0,0.58,1); } 33.3333% { width: 112px; } 100% { width: 112px; } }
+@keyframes a0_h { 0% { height: 2px; } 33.3333% { height: 2px; animation-timing-function: cubic-bezier(0.975,0,0.58,1); } 66.6667% { height: 32px; } 100% { height: 32px; } }
+@keyframes a1_t { 0% { transform: translate(0.2px,0.6px); } 86.6666% { transform: translate(0px,0.3px); } 100% { transform: translate(0px,0.000206px); } }
+@keyframes a1_f { 0% { fill: #000000; } 63.3333% { fill: #000000; } 66.6667% { fill: #19ffff; } 100% { fill: #19ffff; } }
+@keyframes a1_d { 0% { d: path('M0,0L1,0L1,2L0,2Z'); } 66.6667% { d: path('M0,0L1,0L1,2L0,2Z'); } 86.6667% { d: path('M3.578,2.158L108.578,2.158L51.578,28.158L3.578,29.158Z'); } 100% { d: path('M3.578,2.158L108.578,2.158L51.578,28.158L3.578,29.158Z'); } }
+    </style>
+    <rect width="1" height="2" fill="#000000" stroke="none" transform="translate(100.4,36.6) translate(-100,-36.5)" style="animation: 3s linear both a0_t, 3s linear both a0_w, 3s linear both a0_h;"/>
+    <path fill="#000000" stroke="none" d="M0,0L1,0L1,2L0,2Z" transform="translate(100.2,37.1) translate(-100,-36.5)" style="animation: 3s linear both a1_t, 3s linear both a1_f, 3s linear both a1_d;"/>
+</svg>
