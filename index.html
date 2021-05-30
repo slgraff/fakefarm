@@ -47,6 +47,25 @@
         font-size: 80px;
         font-style: italic;
       }
+
+      .video-wrapper {
+        height: 0;
+        overflow: hidden;
+        /* 75% if ratio is 4:3*/
+        /*or 56.25%;*/
+        padding-bottom: 56.25%;
+        position: relative;
+      }
+
+        embed,
+        object,
+        iframe {
+          position: absolute;
+          top: 0;
+          bottom: 0;
+          width: 90%;
+          height: 100%;
+        }
     </style>
   </head>
   <body>
@@ -141,5 +160,11 @@
         </section>
       </section>
     </main>
+    <div class="video">
+      <div class="video-wrapper">
+          <iframe src="https://www.youtube.com/embed/vd7pBIsVflo" title="YouTube video player" frameborder="0" allowfullscreen></iframe>
+      </div>
+    </div>
+
   </body>
 </html>
