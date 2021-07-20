@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Keyshape -->
+<svg xmlns="http://www.w3.org/2000/svg" shape-rendering="geometricPrecision" text-rendering="geometricPrecision" viewBox="0 0 1920 3080" style="white-space: pre;">
+    <style>
+@keyframes a0_d { 0% { d: path('M0,0C0,0,945.335,0,945.335,0L1961,0C1961,0,1987,3141.18,1987,3141.18C1987,3141.18,-30,3178,-30,3178L-14.5869,1545.24C-14.5869,1545.24,0,0,0,0Z'); } 75.7576% { d: path('M729,556C221.453,284.3,88.4634,68.4068,945.335,0L1961,0C979.004,235.204,300.597,511.615,1987,1109C1333.52,910.92,700.77,490.361,-30,1122L-14.5869,545.55C61.259,234.697,400.892,405.878,729,556Z'); } 100% { d: path('M729,556C221.453,284.3,88.4634,68.4068,945.335,0L1961,0C979.004,235.204,300.597,511.615,1987,1109C1333.52,910.92,700.77,490.361,-30,1122L-14.5869,545.55C61.259,234.697,400.892,405.878,729,556Z'); } }
+@keyframes a1_d { 0% { d: path('M0,0C0,0,2352,0,2352,0C2352,0,2352,602,2352,602C1373.97,359.923,633.903,414.732,0,602Z'); } 56.0606% { d: path('M0,0C1598.47,921.62,1783.46,243.811,2352,0C2352,0,2352,602,2352,602C567,597,949.446,1018.81,0,602Z'); } 90.9091% { d: path('M0,0C1598.47,3557.02,1783.46,940.996,2352,0C2352,0,2352,2323.44,2352,2323.44C567,2304.14,949.446,3932.13,0,2323.44Z'); } 100% { d: path('M0,0C186.024,2999.62,961.023,616.431,2352,0C1474.86,1036.89,1303.68,1862.58,2352,2323.44C567,2304.14,949.446,3932.13,0,2323.44Z'); } }
+@keyframes a2_mo { 0% { offset-distance: 0%; } 15.1515% { offset-distance: 100%; } 100% { offset-distance: 100%; } }
+@keyframes a3_mo { 0% { offset-distance: 0%; } 84.8485% { offset-distance: 100%; } 100% { offset-distance: 100%; } }
+@keyframes a4_mo { 0% { offset-distance: 0%; } 39.3939% { offset-distance: 62.831%; } 84.8485% { offset-distance: 100%; } 100% { offset-distance: 100%; } }
+    </style>
+    <path fill="#4f4f4f" stroke="none" d="M0,0L945.335,0L1961,0L1987,3141.18L-30,3178L-14.5869,1545.24Z" transform="translate(263.5,271.5) translate(-287.5,-287.5)" style="animation: 6.6s linear both a0_d;"/>
+    <path fill="#1f1f1f" stroke="none" d="M0,0L2352,0L2352,602C1373.97,359.923,633.903,414.732,0,602Z" transform="translate(1122,244) translate(-1176,-301)" style="mix-blend-mode: screen; animation: 6.6s linear both a1_d;"/>
+    <ellipse rx="60.5" ry="60.5" fill="#4f4f4f" stroke="none" transform="translate(1751.5,148.5)" style="mix-blend-mode: color-dodge;"/>
+    <ellipse rx="60.5" ry="60.5" fill="#4f4f4f" stroke="none" style="mix-blend-mode: color-dodge; animation: 6.6s linear both a2_mo; offset-path: path('M1583.5,235.5C915.812,250.1,332.829,379.389,86.5,964.5L86.5,964.5'); offset-rotate: 0deg;"/>
+    <ellipse rx="60.5" ry="60.5" fill="#4f4f4f" stroke="none" transform="translate(1812,668.643)" style="mix-blend-mode: color-dodge;"/>
+    <ellipse rx="60.5" ry="60.5" fill="#4f4f4f" stroke="none" style="mix-blend-mode: color-dodge; animation: 6.6s linear both a3_mo; offset-path: path('M1380.11,269.5C994.23,561.72,1192.97,715.254,1630.5,812.143L1630.5,812.143'); offset-rotate: 0deg;"/>
+    <ellipse rx="60.5" ry="60.5" fill="#4f4f4f" stroke="none" transform="translate(644.5,872.643)" style="mix-blend-mode: color-dodge;"/>
+    <ellipse rx="60.5" ry="60.5" fill="#4f4f4f" stroke="none" style="mix-blend-mode: color-dodge; animation: 6.6s linear both a4_mo; offset-path: path('M464.5,209C1032.61,114.514,1524.97,227.74,1812,904C1751.46,1065.34,1498.65,1100.3,894,904L894,904'); offset-rotate: 0deg;"/>
+</svg>
