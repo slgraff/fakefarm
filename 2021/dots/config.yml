@@ -1,0 +1,12 @@
+---
+title: connect the dots
+substitute:
+  - []
+comments: commentary.html
+layout: layout.html.erb # add this.
+page: page.html.erb
+verse_template: _verse_list.html.erb
+verses: verses.yml
+import: verses.txt
+output: index.html
+stylesheet: true
