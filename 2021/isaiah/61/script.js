@@ -15,5 +15,6 @@ function body(content) {
 }
 
 
-let b = boom(61);
-debugger
+var b = boom(61);
+console.log(b)
+// debugger
