@@ -1,0 +1,11 @@
+# the name
+
+https://www.blueletterbible.org/search/search.cfm?Criteria=%22the+name+of+the+lord%22&t=ESV#s=s_primary_0_1
+
+# your name
+
+https://www.blueletterbible.org/search/search.cfm?Criteria=%22your+name%22&t=ESV#s=s_primary_0_1
+
+# name is
+
+https://www.blueletterbible.org/search/search.cfm?Criteria=%22name+is%22&t=ESV#s=s_primary_0_1
