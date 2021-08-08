@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Name</title>
+  <style>
+    main {
+      width: 50%;
+      margin: 0 auto;
+    }
+    p {
+      font-size: 2em;
+      font-family: georgia;
+      line-height: 50px;
+    }
+    body {
+      background: #dad7c7;
+      border: 10px solid tomato;
+      margin: 0;
+      padding: 0;
+    }
+  </style>
+</head>
+<body>
+  <main>
+    <article class='article'>
+      <% @raw.each do |r| %>
+
+        <p class='verse'><%= r[:verse] %></p>
+        <p>
+          <i>
+            <%= r[:ref] %>
+          </i>
+        </p>
+      <% end %>
+    </article>
+  </main>
+</body>
+</html>
