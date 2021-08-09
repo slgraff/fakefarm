@@ -1,20 +1,29 @@
-function boom(chapter) {
-  fetch(`http://localhost:8000/isaiah/${chapter}/data.js`)
-    .then(response => response.json())
-    .then(data => {
-      return data
+async function getUsers(chapter) {
+    let url = `http://localhost:8000/2021/isaiah/${chapter}/data.js`;
+    try {
+        let res = await fetch(url);
+        return await res.json();
+    } catch (error) {
+        console.log(error);
+    }
+}
+
+async function renderUsers(chapter) {
+    let users = await getUsers(chapter);
+
+    let html = '';
+    users.forEach(user => {
+      let htmlSegment = `
+        <div class="user">
+            <h2>${user.no}</h2>
+            <div class="email">${user.text}</div>
+        </div>
+        `;
+      html += htmlSegment;
     });
+
+    let container = document.querySelector('.container');
+    container.innerHTML = html;
 }
 
-function title(content) {
-  return ejs.render('<h1><%= title %></h1>', {title: content});
-}
-
-function body(content) {
- return ejs.render('<p><%= title %></p>', {title: content});
-}
-
-
-var b = boom(61);
-console.log(b)
-// debugger
+renderUsers(61);
