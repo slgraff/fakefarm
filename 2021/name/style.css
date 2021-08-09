@@ -1,0 +1,32 @@
+h1 {
+  font-size: 5em;
+  font-family: Helvetica;
+  padding: 1em;
+}
+
+article {
+  margin-bottom: 1em;
+  background: white;
+  padding: 1em;
+}
+
+.comments {
+  border: 1px solid #aaa;
+  padding: 1em;
+}
+
+main {
+  width: 50%;
+  margin: 0 auto;
+}
+p {
+  font-size: 2em;
+  font-family: georgia;
+  line-height: 50px;
+}
+body {
+  background: #dad7c7;
+  border: 20px solid tomato;
+  margin: 0;
+  padding: 0;
+}

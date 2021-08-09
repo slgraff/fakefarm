@@ -1,9 +1,9 @@
 require 'erb'
 
 class Template
-  def initialize(raw, markup=nil)
+  def initialize(raw, template, markup=nil)
     @raw = raw
-    file = File.join('.', 'spec', '2021', 'name', 'fixtures', 'basic_template.erb')
+    file = template
     @markup = File.read(file)
   end
 

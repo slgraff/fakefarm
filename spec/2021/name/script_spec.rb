@@ -5,8 +5,9 @@ require_relative './fixtures/my_name_raw.rb'
 RSpec.describe Script do
   let(:raw) { File.join('.', 'spec', '2021', 'name', 'fixtures','my_name_raw.rb') }
   let(:output) { File.join('.', 'spec', '2021', 'name', 'fixtures', 'index.html')}
+  let(:template) { File.join('.', 'spec', '2021', 'name', 'fixtures', 'basic_template.erb') }
 
-  subject { described_class.new(raw: raw, output: output) }
+  subject { described_class.new(raw: raw, output: output, template: template) }
 
   it 'outputs raw to html' do
     file = File.join('.', 'spec', '2021', 'name', 'fixtures','index.html')
@@ -28,7 +29,7 @@ RSpec.describe Script do
     end
 
     it 'takes an erb template' do
-      expect(subject.template).to include("<h1>Elohim also said to Moses,")
+      expect(subject.template).to include("Elohim also said to Moses,")
     end
   end
 end

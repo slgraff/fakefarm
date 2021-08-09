@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Name</title>
+  <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+  <h1>The Name Brand Elohim</h1>
+  <main>
+
+    <section id='intro'></section>
+    <% @raw.each_with_index do |r, i| %>
+      <article class='article'>
+        <p>
+          <i>
+            <%= r[:ref] %>
+          </i>
+        </p>
+        <p class='verse'><%= r[:verse] %></p>
+        <p class="id">Verse ID: <%= i + 1 %> </p>
+
+        <% if r[:comments].count > 0 %>
+          <aside class='comments'>
+            <h2>Comments</h2>
+            <% r[:comments].each do |c| %>
+              <p class="comment"><%= c[:comment] %> </p>
+              <p class="date">
+                <i>
+                  <%= c[:date] %>
+                </i>
+              </p>
+              <% if r[:comments].length > 1 %>
+                <hr>
+              <% end %>
+            <% end %>
+          </aside>
+        <% end %>
+      </article>
+    <% end %>
+  </main>
+</body>
+</html>
