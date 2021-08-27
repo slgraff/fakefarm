@@ -2,8 +2,8 @@
 
 1
 Let Elohim arise
-Let YHVH Elohim's enemies shall be scattered
-Let enemies who hate YHVH Elohim flee before YHVH Elohim!
+Let YHVH Elohim's enemies be scattered
+Let the enemies who hate YHVH Elohim flee before YHVH Elohim!
 
 2
 As smoke is driven away, 
@@ -20,7 +20,7 @@ they shall be jubilant with joy!
 4
 Sing to Elohim, sing praises to YHVH Elohim's name;
 lift up a song to YHVH Elohim who rides through the deserts;
-YHVH Elohim's name is the LORD;
+YHVH Elohim's name is YHVH;
 exult before YHVH Elohim!
 
 5
@@ -29,20 +29,22 @@ is Elohim in YHVH Elohim's holy habitation.
 
 6
 Elohim settles the solitary in a home;
-he leads out the prisoners to prosperity,
+YHVH leads out the prisoners to prosperity,
 but the rebellious dwell in a parched land.
 
 7
-O Elohim, when you went out before your people,
-when you marched through the wilderness, Selah
+O Elohim, when YHVH went out before YHVH's people,
+when YHVH marched through the wilderness, Selah
 
 8
 the earth quaked, the heavens poured down rain,
-before Elohim, the One of Sinai,
+before Elohim, the Holy One of Sinai,
 before Elohim, the Elohim of Israel.
+
 9
-Rain in abundance, O Elohim, you shed abroad;
-you restored your inheritance as it languished;
+Rain in abundance, O Elohim, YHVH shed abroad;
+YHVH restored YHVH's inheritance as it languished;
+
 10
 your flock found a dwelling in it;
 in your goodness, O Elohim, you provided for the needy.
@@ -50,6 +52,7 @@ in your goodness, O Elohim, you provided for the needy.
 11
 YHVH gives the word;
 the women who announce the news are a great host:
+
 12
 “The kings of the armies—they flee, they flee!”
 The women at home divide the spoil—
