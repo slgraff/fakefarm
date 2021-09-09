@@ -38,18 +38,13 @@ RAW = [
     flag: false,
     tags: ['my name'],
     comments: [],
-    verse: "
-Pay careful attention to him and obey his voice; do not rebel against him, for he will not pardon your transgression, for My name is in him.
-
-"
+    verse: "Pay careful attention to him and obey his voice; do not rebel against him, for he will not pardon your transgression, for My name is in him."
   }, {
     ref: 'Exo 33:19',
     flag: false,
     tags: ['my name'],
     comments: [],
-    verse: "
-And he said, 'I will make all my goodness pass before you and will proclaim before you My name 'YHVH.' And I will be gracious to whom I will be gracious, and will show mercy on whom I will show mercy.
-"
+    verse: "And he said, 'I will make all my goodness pass before you and will proclaim before you My name 'YHVH.' And I will be gracious to whom I will be gracious, and will show mercy on whom I will show mercy."
   }, {
     ref: 'Lev 19:12',
     flag: false,
