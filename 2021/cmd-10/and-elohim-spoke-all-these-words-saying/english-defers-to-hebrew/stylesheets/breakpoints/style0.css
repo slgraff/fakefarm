@@ -1,0 +1,79 @@
+.document {}
+.term-1 {}
+.term-2 {}
+.term-3 {}
+.term-4 {}
+.term-5 {}
+.hero {}
+.english {}
+.hebrew {}
+.hebrew img {}
+.word {}
+.no-word {}
+
+.document {
+  background: var(--black);
+  color: var(--black);
+  font-family: "Heebo", sans-serif;
+}
+
+.term-1 {
+  font-size: 10em;
+  padding-left: 6vw;
+}
+
+.term-2 {
+  font-size: 8em;
+  padding-left: 3vw;
+}
+
+.term-3 {
+  font-size: 6em;
+  padding-left: 3vw;
+}
+
+.term-4 {
+  font-size: 4em;
+  padding-left: 3vw;
+}
+
+.term-5 {
+  font-size: 3em;
+  padding-left: 3vw;
+}
+
+.hero {
+  font-size: 3em;
+  text-align: right;
+  padding-right: var(--space-1);
+  padding-top: var(--space-1);
+  padding-bottom:var(--space-1);
+  border: 14px solid var(--white);
+  background-image: linear-gradient(-90deg, #002A33, #390533);
+}
+
+.headline {
+  border-right: 10px solid var(--red);
+  padding-right: var(--space-0);
+}
+
+.hebrew {
+  padding-top: 100px;
+  padding-right: 20px;
+  min-height: 300px;
+}
+
+.hebrew img{
+  width: 90%;
+  mix-blend-mode: multiply;
+  float: right;
+}
+
+.word {
+  padding-top: var(--space-2);
+}
+
+.no-word {
+  padding-bottom: var(--space-1);
+  border: 30px solid var(--black);
+}

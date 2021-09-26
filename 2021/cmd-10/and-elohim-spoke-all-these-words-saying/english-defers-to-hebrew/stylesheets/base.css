@@ -1,0 +1,126 @@
+:root {
+  --white: #fefefd;
+  --black: #1e1601;
+  --red: #C7000A;
+  --pink: #FF00A1;
+  --orange: #f1621a;
+  --yellow: #f1d51a;
+  --green: #1acd71;
+  --blue: #41d7fa;
+  --navy: #330032;
+  --purple: #b35cd5;
+  --space-0: 0.5em;
+  --space-1: 1em;
+  --space-2: 2em;
+  --space-3: 3em;
+  --space-4: 5em;
+  --space-5: 10em;
+  --space-6: 15em;
+  --space-7: 20em;
+}
+
+.red {
+  color: var(--red);
+}
+.red:hover {
+  color: var(--blue);
+}
+.red-bg {
+  background: var(--red);
+}
+.red-gr {
+  background-image: linear-gradient(-90deg, #B57DE3, #C7000A);
+}
+.red-bar {
+  border-left: 20px solid var(--red);
+}
+
+.pink {
+  color: var(--pink);
+}
+.pink-bg {
+  background: var(--pink);
+}
+.pink-bar {
+  border-left: 20px solid var(--pink);
+}
+.orange {
+  color: var(--orange);
+}
+.orange-bg {
+  background: var(--orange);
+}
+.orange-bar {
+  border-left: 20px solid var(--orange);
+}
+.yellow {
+  color: var(--yellow);
+}
+.yellow-bg {
+  background: var(--yellow);
+}
+.yellow-gr {
+  background-image: linear-gradient(-90deg, #f1d51a, #FF00A1);
+}
+.yellow-bar {
+  border-left: 20px solid var(--yellow);
+}
+
+.green {
+  color: var(--green);
+}
+.green-bg {
+  background: var(--green);
+}
+.green-bar {
+  border-left: 20px solid var(--green);
+}
+.blue {
+  color: var(--blue);
+}
+.blue-bg {
+  background-image: linear-gradient(-90deg, #28E2B9, #330032);
+}
+.blue-bar {
+  border-left: 20px solid var(--blue);
+}
+.navy {
+  color: var(--navy);
+}
+.navy-bg {
+  background: var(--navy);
+}
+.navy-bar {
+  border-left: 20px solid var(--navy);
+}
+.purple {
+  color: var(--purple);
+}
+.purple-bg {
+  background: var(--purple);
+}
+.purple-bar {
+  border-left: 20px solid var(--purple);
+}
+.white {
+  color: var(--white);
+}
+.white-bg {
+  background: var(--white);
+}
+
+.white-gr {
+  background-image: linear-gradient(-90deg, #FFFFFF, #030303);
+}
+
+
+.white-bar {
+  border-left: 20px solid var(--white);
+}
+.black {
+  color: var(--black);
+}
+.black-bg {
+  background: var(--black);
+}
+.hidden { display: none; }
