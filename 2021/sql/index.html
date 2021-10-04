@@ -1,0 +1,103 @@
+<pre>
+
+Problem 1;
+
+  1. order
+  2. customer
+  3. create the order record
+  4. add items to order
+  5. find total cost
+
+Name	DishID
+Mini Cheeseburgers	4
+House Salad	7
+Tropical Blue Smoothie	20
+
+dish ids = 4,7,20
+customer id = 6;
+
+
+
+step 1.
+insert into orders(customerid,orderdate)
+values(6,"2021-10-01");
+
+step 2.
+select order id
+
+insert into ordersdishes(orderid, dishid)
+values((
+select orderid from
+orders where orderdate = '2021-10-01'
+
+),4);
+
+select od.orderid as "order number", sum(d.price) as total from ordersdishes as od
+join
+
+Dishes as d on
+od.DishID = d.DishID
+
+where orderid  =  (
+select orderid from Orders
+where  OrderDate = '2021-10-01' AND
+customerid = 6
+)
+
+===============
+
+Problem 2
+
+set cleo goldwater
+favorite dish to quinoa salad
+
+1. find dish
+select dishid from Dishes
+where name like "%quinoa%"
+
+2. find cleo
+select customerid from customers
+where firstname like '%cleo%';
+
+=====================
+
+Library Challenges
+
+1. Find the number of available copies of dracula.
+
+
+
+
+select bookid from books
+  where title like "%Drac%"
+
+  except
+
+select books.BookID from loans
+join books
+on loans.bookid = books.bookid
+where books.BookID in (
+  select bookid from books
+  where title like "%Drac%"
+) and loans.ReturnedDate is null
+
+select(
+select count(books.title) from books where books.title = 'Dracula'
+-
+(select count(books.title)
+  from loans
+  join books on loans.bookid = books.bookid
+  where books.title = 'Dracula' and Loans.returneddate is null)
+  ) as AvailableBooks;
+
+===
+
+Add books to books table
+
+insert into books(title, author, published, barcode) values
+('Dracula', 'Bram Stoker', 1897, 4819277482),
+("Gulliver's Travels", 'Jonathan Swift', 1729, 4899254401);
+
+
+</pre>
+

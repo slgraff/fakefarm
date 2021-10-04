@@ -1,9 +1,0 @@
-[ ] data summary how many verses breakdown
-[ ] markdown intro
-[ ] site nav
-[ ] style layout
-[ ] page nav
-[ ] table of contents
-[ ] art
-[ ] tailwind
-[ ] review words
