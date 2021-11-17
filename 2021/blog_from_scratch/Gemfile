@@ -4,6 +4,8 @@ source "https://rubygems.org"
 
 git_source(:github) { |repo_name| "https://github.com/#{repo_name}" }
 
-# gem "rails"
+
 
 gem "rspec", "~> 3.10"
+gem "shrine", "~> 3.0"
+gem "aws-sdk-s3", "~> 1.14"

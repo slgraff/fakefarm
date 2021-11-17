@@ -11,6 +11,9 @@ class Blog
     # require 'pry'; binding.pry
   end
 
+  DATA_PATH = File.expand_path('data')
+  MARKDOWN_PATH = File.expand_path('md',DATA_PATH)
+  HTML_PATH = File.expand_path('html',DATA_PATH)
 
   def initialize(data, template, parser: Redcarpet::Markdown.new(Redcarpet::Render::HTML))
     @data = data
@@ -19,7 +22,15 @@ class Blog
   end
 
   def data
-    File.read(@data)
+    File.read("#{MARKDOWN_PATH}/#{@data}")
+  end
+
+  def url
+    "#{header.url}.html"
+  end
+
+  def save
+    File.write(File.join(HTML_PATH, url),publish)
   end
 
   def body
@@ -87,14 +98,25 @@ RSpec.describe Blog do
   describe 'post' do
     let(:template) {File.join(APP_ROOT, '..', 'lib', 'template.html.erb') }
 
-    let(:data) { File.join(APP_ROOT, '..', 'data', '2021-11-12.md') }
+    let(:data) { '2021-11-12.md' }
+
     subject { Blog.new(data, template) }
+
+    describe 'save' do
+      it 'save' do
+        subject.save
+        file = File.open(File.join('.', 'data', 'html', subject.url))
+        expect(File.exist?(file)).to be
+        File.delete(file)
+      end
+    end
 
     it 'convert md to html' do
       # require 'pry'; binding.pry
     end
 
     it 'data' do
+      # require 'pry'; binding.pry
       expect(subject.data).to be
     end
 
