@@ -12,12 +12,13 @@ end
 RSpec.describe Bin do
   it 'new jot' do
     described_class.jot
-    require 'pry'; binding.pry
+    # require 'pry'; binding.pry
     dir = date.today
     expect(described_class.jot).to be
   end
 
   it 'new bible' do
+       described_class.jot
   end
 
     it 'new topic' do

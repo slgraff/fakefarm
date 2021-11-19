@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html class="no-js" lang="">
+
+<head>
+  <meta charset="utf-8">
+  <title><%= @header.title %></title>
+  <meta name="description" content="<%= @header.description %>">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <meta property="og:title" content="<%= @header.title %>">
+  <link rel="stylesheet" href="../app/stylesheets/normalize.css">
+  <link rel="stylesheet" href="../app/stylesheets/main.css">
+  <meta name="theme-color" content="#50C878">
+
+  <!-- coming soon -->
+  <meta property="og:type" content="">
+  <meta property="og:url" content="">
+  <meta property="og:image" content="">
+  <link rel="manifest" href="site.webmanifest">
+  <link rel="apple-touch-icon" href="icon.png">
+</head>
+
+<body>
+
+  <% if @hero.present? %>
+    <section class='hero-image'>
+      <img src="<%= @hero %>">
+    </section>
+  <% end %>
+
+  <section class='bible-verse'>
+    <%= @header.description %>
+    <i><%= @header.reference %></i>
+  </section>
+
+  <%= @content %>
+
+  <script src="../js/vendor/modernizr-3.11.2.min.js"></script>
+  <script src="../js/plugins.js"></script>
+  <script src="../js/main.js"></script>
+
+  <!-- Google Analytics: change UA-XXXXX-Y to be your site's ID. -->
+  <script>
+    window.ga = function () { ga.q.push(arguments) }; ga.q = []; ga.l = +new Date;
+    ga('create', 'UA-XXXXX-Y', 'auto'); ga('set', 'anonymizeIp', true); ga('set', 'transport', 'beacon'); ga('send', 'pageview')
+  </script>
+  <script src="https://www.google-analytics.com/analytics.js" async></script>
+</body>
+</html>
