@@ -6,9 +6,7 @@ path: bible/psalms/119/71
 slug: it-is-good
 tags: psalms, verse
 date: 2021-11-19
-hero: c22b37962708ab35b2ba35d0ba7581f0.jpg
-# publish: false
-# format: verse
+hero: andrea.jpg
 ---
 
 # It is good
